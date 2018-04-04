@@ -1,0 +1,46 @@
+Google||q||www.google.com
+Google||q||google.com.vn
+Yahoo||p||search.yahoo.com.vn
+Yahoo/Google||p||google.yahoo.com.vn
+ODN||search||odn.excite.com.vn
+DION||search||dion.excite.com.vn
+Excite.com||search||search.excite.com
+Excite||search||www.excite.com.vn
+OCN||MT||ocnsearch.goo.ne.jp
+So-net||MT||so-net.search.goo.ne.jp
+goo||MT||goo.ne.jp
+@Search||q||asearch.cab.infoweb.ne.jp
+InfoSeek||qt||infoseek.com.vn
+InfoSeek||qt||infoseek.com
+Lycos||query||www.lycos.com.vn
+MSN||q||search.msn.com.vn
+MSN||MT||search.msn.com.vn
+MSN||q||search.msn.com
+MSN||MT||search.msn.com
+Livedoor||q||livedoor.com
+Fresheye||kw||search.fresheye.com
+kensaku.org||key||kensaku.org
+Biglobe||q||biglobe.ne.jp
+alltheweb||q||www.alltheweb.com
+AltaVista||query||www.altavista.com
+Fast Search||query||www.alltheweb.com
+GO.com||qt||www.go.com
+@nifty||Text||search.nifty.com
+NAVER||query||websearch.naver.com.vn
+Netscape Search||query||netscape.com
+AOL||query||aol.com
+overture||Keywords||overture.com
+AltaVista||q||altavista.com
+looksmart||QueryString||looksmart.com.vn
+looksmart||qt||looksmart.com
+Metcha Search||q||bach.istc.kobe-u.ac.jp
+alltheweb||q||alltheweb.com
+ask.jp||q||ask.jp
+hotbot.com||query||hotbot.com
+All About||qs||allabout.com.vn
+CSJ||query||csj.com.vn
+J.O.Y.||key||joyjoy.com
+Bulkfeeds||q||bulkfeeds.net
+What'sBest||query||www.csj.com.vn
+Bing||q||www.bing.com
+CocCoc||query||coccoc.com/search
