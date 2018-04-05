@@ -13,7 +13,12 @@ require_once("sqlite3Ope.php");
 #-------------------------------------------------------------------
 #------------------------------------------------------------------
 session_start();
-if ($_SESSION['term']!=null)
+if (!isset($_SESSION['term']))
+{
+    $_SESSION['term']=date('Y_m');
+    $term=$_SESSION['term'];
+}
+else if ($_SESSION['term']!=null)
 {
     if (isset($_POST['term']))
     {

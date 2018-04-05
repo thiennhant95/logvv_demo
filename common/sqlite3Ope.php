@@ -142,6 +142,8 @@ class sqlite3Ope extends SQLite3
                 if (isset($data['Y'])) $data_return[$i]['D'] = $row['D'];
                 if (isset($data['M'])) $data_return[$i]['M'] = $row['M'];
 
+                if (isset($data['COUNTRY'])) $data_return[$i]['COUNTRY'] = $row['COUNTRY'];
+                if (isset($data['CITY'])) $data_return[$i]['CITY'] = $row['CITY'];
                 $i++;
             }
             return $data_return;
@@ -178,5 +180,4 @@ class sqlite3Ope extends SQLite3
     (`REMOTE_ADDR`, `USER_AGENT`,`REFERER`,`QUERY_STRING`,`ENGINE`,`OS`,`BROWSER`,`PAGE_URL`,`UNIQUE_FLG`,`USER_FLG`,`INS_DATE`,`TIME`,`DEL_FLG`) 
     VALUES ("119.26.170.114", "","","","WindowsUnknown","Internet ExplorerUnknown","http://www.sogocorporation.com/unreserved/","dsdsd","dsdsd","dsds","dsdsd","dsds","0")');
     }
-
 }

@@ -21,7 +21,9 @@
     var s_obj = new _WebStateInvest();
         document.write('<img src="{$top_path}{$link_type}?referrer='+escape(document.referrer)+'&st_id_obj='+encodeURI(String(s_obj._st_id_obj))+'" width="1" height="1" style="display:none">');
     //-->
+    </script>
 EDIT;
         return $html;
     }
+
 ?>

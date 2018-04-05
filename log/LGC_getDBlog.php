@@ -96,6 +96,17 @@ function day_access(){
     return $fetch_a;
 }
 
+#-------------------------------------
+function get_day_access()
+{
+
+    $access_query=access();
+    usort($access_query, function($a, $b) {
+        return $a['INS_DATE'] - $b['INS_DATE'];
+    });
+    return array_slice($access_query,0,100);
+}
+
 function day_u_access(){
 
     $counts_1 = array();
@@ -228,7 +239,10 @@ function mon_uu_access(){
 function month_top()
 {
     $month_top=access();
-    return array_slice($month_top, 0, 100);
+    usort($month_top, function($a, $b) {
+        return $a['INS_DATE'] - $b['INS_DATE'];
+    });
+    return array_slice($month_top, 0, 1000);
 }
 #----------------------------------------------
 function hour_access(){
@@ -608,6 +622,7 @@ switch ($_POST["mode"]):
 			$fetch_day = day_access();
 			//$fetch_day_u = day_u_access();
 			$fetch_day_uu = day_uu_access();
+			$get_day_access=get_day_access();
 		break;
 	case "month":
 			$MonCnt = mon_access();

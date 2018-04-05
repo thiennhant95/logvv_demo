@@ -61,10 +61,13 @@ window.alert("")
 <?php endif; ?>
 </head>
 <center>
-<body onLoad="MM_preloadImages('images/menu_01_on.jpg','images/menu_02_on.gif','images/menu_03_on.gif','images/menu_04_on.gif','images/menu_05_on.gif','images/menu_06_on.gif','images/menu_07_on.gif','images/menu_on_01.gif','images/menu_on_02.gif','images/menu_on_03.gif','images/menu_on_04.gif','images/menu_on_05.gif')">
+<body onLoad="MM_preloadImages('images/menu_01_on.jpg','images/menu_02_on.jpg','images/menu_03_on.jpg','images/menu_04_on.jpg','images/menu_05_on.jpg','images/menu_06_on.jpg','images/menu_07_on.jpg','images/menu_on_01.jpg','images/menu_on_02.jpg','images/menu_on_03.jpg','images/menu_on_04.jpg','images/menu_on_05.jpg')">
 <table width="770" border="0" cellspacing="0" cellpadding="0">
 	<tr>
-		<td colspan="2"><img src="images/header.jpg" width="770" height="97" hspace="0" vspace="0"></td>
+		<td colspan="2">
+            <img src="images/header.jpg" width="770" height="97" hspace="0" vspace="0" alt="dsd">
+            <div class="top-left"><?php echo NAME_COMPANY?></div>
+        </td>
 	</tr>
 	<tr>
 		<td width="178" valign="top" height="100%" background="images/bk.gif">
@@ -193,7 +196,7 @@ window.alert("")
 
 		  <td height="30" align="center" background="images/m_d_access_back.gif">
 			SỐ LƯỢT XEM TRANG: <b><font color="#003399" size="3"><?php echo count($fetch);?></font></b><br>
-			SỐ LƯỢT TRUY CẬP : <b><font color="#003399" size="3"><?php echo count($fetch_uu);?></font></b>
+			SỐ LƯỢT TRUY CẬP : <b><font color="#003399" size="3"><?php echo count($fetch_uu)+(count($fetch_uu)==null?'0':'1')?></font></b>
 			</td>
 			</tr>
 			<tr>
@@ -202,14 +205,17 @@ window.alert("")
 			<tr>
 
 		  <td height="30" align="center" background="images/m_d_access_back.gif">
-			<b><font color="#003399" size="3">Lượt Xem Trang: <?php echo count($TodayCnt)+1;?></font></b>&nbsp;&nbsp;
+			<b><font color="#003399" size="3">Lượt Xem Trang: <?php echo count($TodayCnt);?></font></b>&nbsp;&nbsp;
 			</td>
 			</tr>
+            <?php
+            $date=date('Y_m', strtotime('-6 month', strtotime(date('Y-m'))));
+            ?>
 			<form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
 			<tr>
 				<td width="178" height="158" background="images/menu_under_01.gif" align="right" valign="top" style="padding-right:5px;">
                     ■ DỮ LIỆU TRUY CẬP <br>
-                    (Trong 5 tháng gần nhất)<br>
+                    (Trong 6 tháng gần nhất)<br>
 				<select name="term" id="term">
             <?php
             $dir = opendir(ACCESS_PATH);
@@ -221,7 +227,9 @@ window.alert("")
                 if(strstr($v,"access_log_db")){
                     $db_fname = explode("_",$v);
                     $filedate = $db_fname[0]."_".$db_fname[1];
-                    echo "<option value=\"".$filedate."\">".$db_fname[0].'_'.$db_fname[1]."</option>\n";
+                    if ($filedate >= $date) {
+                        echo "<option value=\"" . $filedate . "\">" . $db_fname[0] . '_' . $db_fname[1] . "</option>\n";
+                    }
                 }
             }
             ?>
@@ -277,6 +285,36 @@ window.alert("")
 			<?php endfor;?>
 		</table>
 		<?php endif;?>
+            <?php
+            if (isset($get_day_access)):
+            ?>
+            <br>
+            <table width="553" cellpadding="0" cellspacing="1" border="0" bgcolor="#000000">
+                <tr bgcolor="white">
+                    <td align="left" colspan="4"><b style=" text-align:center;color:#0B0D60;font-size: 15px;font-family: Avenir, Helvetica, sans-serif">100 LƯỢT TRUY CẬP MỚI NHẤT TRONG NGÀY <?php echo date('d-m') ?></b></td>
+                </tr>
+                    <th bgcolor="white">REMOTE ADDR</th>
+                    <th bgcolor="white">COUNTRY/ CITY</th>
+                    <th bgcolor="white">PAGE URL</th>
+                    <th bgcolor="white">TIME</th>
+                <?php
+                foreach ($get_day_access as $row_day):
+                    if ($row_day['INS_DATE']==date('Y-m-d')) {
+                        ?>
+                        <tr bgcolor="white" style="height: 35px">
+                            <td><?php echo $row_day['REMOTE_ADDR']  ?></td>
+                            <td><?php echo $row_day['COUNTRY'].' / '. $row_day['CITY']?></td>
+                            <td><a href="<?php echo $row_day['PAGE_URL'] ?>"><?php echo $row_day['PAGE_URL'] ?></a></td>
+                            <td><?php echo $row_day['TIME'].'  ' ?></td>
+                        </tr>
+                        <?php
+                    }
+                endforeach;
+                ?>
+            </table>
+            <?php
+            endif;
+            ?>
 		<?php if(!empty($MonCnt)):?>
 		<br>
 		<table width="553" cellpadding="0" cellspacing="1" border="0" bgcolor="#000000">
@@ -317,6 +355,7 @@ window.alert("")
                 <table width="553" cellpadding="0" cellspacing="1" border="0" bgcolor="#000000">
                     <thead style="color: white">
                     <th>REMOTE ADDR</th>
+                    <th>COUNTRY/ CITY</th>
                     <th>PAGE URL</th>
                     <th>TIME - DAY</th>
                     </thead>
@@ -325,6 +364,7 @@ window.alert("")
                 ?>
                 <tr bgcolor="#FFFFFF" style="height: 30px">
                     <td><?php echo $row['REMOTE_ADDR']  ?></td>
+                    <td><?php echo $row['COUNTRY'].' / '.$row['CITY']  ?></td>
                     <td><a href="<?php echo $row['PAGE_URL'] ?>" target="_blank"><?php echo $row['PAGE_URL'] ?></a></td>
                     <td><?php echo $row['TIME'].'  '.$row['INS_DATE'] ?></td>
                         <?php
@@ -674,3 +714,23 @@ window.alert("")
 <script type="text/javascript">
     document.getElementById("term").value = "<?php echo $_SESSION['term']?>";
 </script>
+<style>
+    .top-left {
+        position: absolute;
+        top: 8px;
+        color: #ffffff;
+        padding-top: 30px;
+        padding-left: 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    th{
+        background-color: #0a0a0a;
+        color: white;
+    }
+</style>

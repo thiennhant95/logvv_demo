@@ -72,7 +72,7 @@ class Browser
     const BROWSER_IPOD = 'iPod'; // http://apple.com
     const BROWSER_IPAD = 'iPad'; // http://apple.com
     const BROWSER_CHROME = 'Chrome'; // http://www.google.com/chrome
-    const BROWSER_ANDROID = 'Android'; // http://www.android.com/
+    const BROWSER_ANDROID = 'Android Browser'; // http://www.android.com/
     const BROWSER_GOOGLEBOT = 'GoogleBot'; // http://en.wikipedia.org/wiki/Googlebot
 
     const BROWSER_YANDEXBOT = 'YandexBot'; // http://yandex.com/bots
@@ -113,13 +113,13 @@ class Browser
     const PLATFORM_UNKNOWN = 'unknown';
     const PLATFORM_WINDOWS = 'Windows';
     const PLATFORM_WINDOWS_CE = 'Windows CE';
-    const PLATFORM_APPLE = 'Apple';
+    const PLATFORM_APPLE = 'IOS';
     const PLATFORM_LINUX = 'Linux';
     const PLATFORM_OS2 = 'OS/2';
     const PLATFORM_BEOS = 'BeOS';
-    const PLATFORM_IPHONE = 'iPhone';
-    const PLATFORM_IPOD = 'iPod';
-    const PLATFORM_IPAD = 'iPad';
+    const PLATFORM_IPHONE = 'IOS';
+    const PLATFORM_IPOD = 'IOS';
+    const PLATFORM_IPAD = 'IOS';
     const PLATFORM_BLACKBERRY = 'BlackBerry';
     const PLATFORM_NOKIA = 'Nokia';
     const PLATFORM_FREEBSD = 'FreeBSD';
@@ -130,7 +130,7 @@ class Browser
     const PLATFORM_ANDROID = 'Android';
     const PLATFORM_PLAYSTATION = "Sony PlayStation";
     const PLATFORM_ROKU = "Roku";
-    const PLATFORM_APPLE_TV = "Apple TV";
+    const PLATFORM_APPLE_TV = "IOS";
     const PLATFORM_TERMINAL = "Terminal";
     const PLATFORM_FIRE_OS = "Fire OS";
     const PLATFORM_SMART_TV = "SMART-TV";
@@ -1727,5 +1727,6 @@ class Browser
         } elseif (stripos($this->_agent, 'Iframely') !== false) {
             $this->_platform = self::PLATFORM_I_FRAME;
         }
+
     }
 }
