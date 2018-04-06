@@ -10,7 +10,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>VIET VANG JSC</title>
 <link href="access_style.css" rel="stylesheet" type="text/css">
 <script language="JavaScript" type="text/JavaScript">
@@ -61,7 +61,25 @@ window.alert("")
 <?php endif; ?>
 </head>
 <center>
-<body onLoad="MM_preloadImages('images/menu_01_on.jpg','images/menu_02_on.jpg','images/menu_03_on.jpg','images/menu_04_on.jpg','images/menu_05_on.jpg','images/menu_06_on.jpg','images/menu_07_on.jpg','images/menu_on_01.jpg','images/menu_on_02.jpg','images/menu_on_03.jpg','images/menu_on_04.jpg','images/menu_on_05.jpg')">
+<body onLoad="MM_preloadImages('images/menu_01_on.jpg','images/menu_02_on.jpg','images/menu_03_on.jpg','images/menu_04_on.jpg','images/menu_05_on.jpg','images/menu_on_01.jpg','images/menu_on_02.jpg','images/menu_on_03.jpg','images/menu_on_04.jpg','images/menu_on_05.jpg')">
+<body>
+<div class="topnav" id="myTopnav">
+    <a href="" class="active">LOG ACCESS</a>
+    <a href="../fmanager/">FILE MANAGE</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+<br>
 <table width="770" border="0" cellspacing="0" cellpadding="0">
 	<tr>
 		<td colspan="2">
@@ -366,7 +384,7 @@ window.alert("")
                     <td><?php echo $row['REMOTE_ADDR']  ?></td>
                     <td><?php echo $row['COUNTRY'].' / '.$row['CITY']  ?></td>
                     <td><a href="<?php echo $row['PAGE_URL'] ?>" target="_blank"><?php echo $row['PAGE_URL'] ?></a></td>
-                    <td><?php echo $row['TIME'].'  '.$row['INS_DATE'] ?></td>
+                    <td><?php echo $row['TIME'].'  '.date("d-m-Y", strtotime($row['INS_DATE'])); ?></td>
                         <?php
                     }
                     ?>
@@ -719,7 +737,7 @@ window.alert("")
         position: absolute;
         top: 8px;
         color: #ffffff;
-        padding-top: 30px;
+        padding-top: 80px;
         padding-left: 20px;
         text-align: center;
         font-weight: bold;
@@ -732,5 +750,65 @@ window.alert("")
     th{
         background-color: #0a0a0a;
         color: white;
+    }
+</style>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav a{
+        font-weight: bold;
+    }
+    .topnav {
+        overflow: hidden;
+        background-color: #1e83c9;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav a:hover {
+        background-color: #d53239;
+        color:  white;
+    }
+
+    .active {
+        background-color: #1e83c9;
+        color: white;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
     }
 </style>

@@ -68,9 +68,9 @@ class Browser
     const BROWSER_AMAYA = 'Amaya'; // http://www.w3.org/Amaya/
     const BROWSER_LYNX = 'Lynx'; // http://en.wikipedia.org/wiki/Lynx
     const BROWSER_SAFARI = 'Safari'; // http://apple.com
-    const BROWSER_IPHONE = 'iPhone'; // http://apple.com
-    const BROWSER_IPOD = 'iPod'; // http://apple.com
-    const BROWSER_IPAD = 'iPad'; // http://apple.com
+    const BROWSER_IPHONE = 'Safari'; // http://apple.com
+    const BROWSER_IPOD = 'Safari'; // http://apple.com
+    const BROWSER_IPAD = 'Safari'; // http://apple.com
     const BROWSER_CHROME = 'Chrome'; // http://www.google.com/chrome
     const BROWSER_ANDROID = 'Android Browser'; // http://www.android.com/
     const BROWSER_GOOGLEBOT = 'GoogleBot'; // http://en.wikipedia.org/wiki/Googlebot

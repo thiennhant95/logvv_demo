@@ -8,7 +8,7 @@
             return $html;
         }
 
-        $link_type = "log.php";
+        $link_type = "http://muinetrips.com/tam/log.php";
 
         //----------------//
         $top_path = $inc_file_path;
@@ -16,7 +16,7 @@
         $html = <<<EDIT
     <script type="text/javascript" src="https://www.google.com/jsapi?key="></script>
     <script src="https://api.all-internet.jp/accesslog/access.js" language="javascript" type="text/javascript"></script>
-    <script language="JavaScript" type="text/javascript">
+    <script language="JavaScript" type="text/javascript" charset="UTF-8">
     <!--
     var s_obj = new _WebStateInvest();
         document.write('<img src="{$top_path}{$link_type}?referrer='+escape(document.referrer)+'&st_id_obj='+encodeURI(String(s_obj._st_id_obj))+'" width="1" height="1" style="display:none">');

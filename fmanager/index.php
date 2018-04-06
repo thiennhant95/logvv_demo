@@ -5,8 +5,6 @@
 //	header("HTTP/1.0 404 Not Found"); exit();
 //}
 
-$injustice_access_chk = 1;
-
 require_once("../common/logconfig.php");
 require_once("util_lib.php");
 require_once("sqlite3Ope.php");

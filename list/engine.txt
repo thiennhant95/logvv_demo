@@ -1,6 +1,7 @@
 Google||q||www.google.com
 Google||q||google.com.vn
-Yahoo||p||search.yahoo.com.vn
+Yahoo||p||search.yahoo.com
+Yahoo||p||vn.search.yahoo.com
 Yahoo/Google||p||google.yahoo.com.vn
 ODN||search||odn.excite.com.vn
 DION||search||dion.excite.com.vn

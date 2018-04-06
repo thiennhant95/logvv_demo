@@ -31,7 +31,7 @@ $browser = $browser->getBrowser();
 #--------------------------------------------------------------------------------------------------------
 
 $host_addr = $_SERVER["HTTP_HOST"];
-//$_GET["referrer"]="http://www.google.com/search?hl=en&q=abc+song&client=firefox";
+$_GET["referrer"]="http://www.google.com/search?hl=en&q=abc+song&client=firefox";
 //$host_addr = "all-internet.jp";
 
 $ref_info	= parse_url($_GET["referrer"]);
@@ -46,7 +46,7 @@ if(!empty($_GET["referrer"])){
 
 #----------------------------------------------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------------------------------------------
-//$_SERVER['HTTP_REFERER']='http://www.google.com/search?hl=en&q=learn+php+2&client=firefox';
+$_SERVER['HTTP_REFERER']='http://www.google.com/search?hl=en&q=learn+php+2&client=firefox';
 $file_info	= parse_url($_SERVER['HTTP_REFERER']);
 //$file_info = isset($_SERVER['HTTP_REFERER']) ? parse_url($_SERVER['HTTP_REFERER']) : '';
 

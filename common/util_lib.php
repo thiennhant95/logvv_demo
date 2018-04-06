@@ -96,7 +96,6 @@ function strRep($str,$mode){
 					$str = stripslashes($str);
 				endif;
 			}
-		
 			break;	
 		case 5:
 
@@ -206,7 +205,7 @@ function httpHeadersPrint($charset="",$css_js_flg=false,$time_flg=false,$cache_f
 
 	if(!$charset)$charset = "UTF-8";
 	header("Content-Type: text/html; charset={$charset}");
-	header("Content-Language: ja");
+	header("Content-Language: jp");
 
 	if($css_js_flg){
 		header("Content-Style-Type: text/css");

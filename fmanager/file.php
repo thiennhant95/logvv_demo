@@ -447,7 +447,10 @@ $fetch_ref = $referen;
 
 <center>
 <body>
-<input type="button" name="button" value="IN BÁO CÁO" onClick="window.print();">
+<div class="head_button">
+<a href="index.php"><input type="button" id="return" name="button" value="QUAY LẠI"></a>
+<input type="button" id="printPageButton" name="button" value="IN BÁO CÁO" onClick="window.print();">
+</div>
 <table class="paper_seo">
     <tr>
         <td width="640" valign="top" height="902">
@@ -649,5 +652,23 @@ $fetch_ref = $referen;
 </table>
 </center>
 </body>
-<div class="footer" style="margin-top:5em;"><?php echo "Copyright © VietVang JSC. All Rights Reserved."?></div>
+<div class="footer" id="footer" style="margin-top:5em;"><?php echo "Copyright © VietVang JSC. All Rights Reserved."?></div>
 </html>
+
+<style>
+    @media print {
+        #printPageButton {
+            display: none;
+        }
+        #footer {
+            display: none;
+        }
+        #return{
+            display: none;
+        }
+    }
+    .head_button
+    {
+        margin-bottom: 5px;
+    }
+</style>

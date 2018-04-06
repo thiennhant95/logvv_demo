@@ -1,9 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 #*******************************************************************************/
-//if(!$injustice_access_chk){
-//	header("HTTP/1.0 404 Not Found");exit();
-//}
 
 $db=new utilLib();
 if($_POST)extract($db->getRequestParams("post",array(8,7,1,4),true));
@@ -97,16 +94,45 @@ function day_access(){
 }
 
 #-------------------------------------
+
+function array_sort($array, $on, $order=SORT_ASC){
+
+    $new_array = array();
+    $sortable_array = array();
+
+    if (count($array) > 0) {
+        foreach ($array as $k => $v) {
+            if (is_array($v)) {
+                foreach ($v as $k2 => $v2) {
+                    if ($k2 == $on) {
+                        $sortable_array[$k] = $v2;
+                    }
+                }
+            } else {
+                $sortable_array[$k] = $v;
+            }
+        }
+
+        switch ($order) {
+            case SORT_ASC:
+                asort($sortable_array);
+                break;
+            case SORT_DESC:
+                arsort($sortable_array);
+                break;
+        }
+
+        foreach ($sortable_array as $k => $v) {
+            $new_array[$k] = $array[$k];
+        }
+    }
+
+    return $new_array;
+}
 function get_day_access()
 {
-
-    $access_query=access();
-    usort($access_query, function($a, $b) {
-        return $a['INS_DATE'] - $b['INS_DATE'];
-    });
-    return array_slice($access_query,0,100);
+    return array_slice(array_sort(access(),'ID',SORT_DESC), 0, 100);
 }
-
 function day_u_access(){
 
     $counts_1 = array();
@@ -238,11 +264,7 @@ function mon_uu_access(){
 #---------------------------------------------
 function month_top()
 {
-    $month_top=access();
-    usort($month_top, function($a, $b) {
-        return $a['INS_DATE'] - $b['INS_DATE'];
-    });
-    return array_slice($month_top, 0, 1000);
+    return array_slice(array_sort(access(),'ID',SORT_DESC), 0, 1000);
 }
 #----------------------------------------------
 function hour_access(){
