@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/log/index.php" description="phpinfo();" line="0" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0c8e6733-2f09-407a-ad4f-3cfc89ade648" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -10,155 +13,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/log/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fmanager/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="util_lib.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/util_lib.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-986">
-              <caret line="179" column="105" lean-forward="false" selection-start-line="179" selection-start-column="105" selection-end-line="179" selection-end-column="105" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DISP_data.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/log/DISP_data.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="32" column="34" lean-forward="true" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LGC_delfile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fmanager/LGC_delfile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="file.php" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="file.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fmanager/file.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2070">
-              <caret line="570" column="16" lean-forward="true" selection-start-line="570" selection-start-column="16" selection-end-line="570" selection-end-column="16" />
-              <folding>
-                <element signature="e#7414#7420#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#2;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#2;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#10404#10410#1#HTML" expanded="true" />
-                <element signature="n#style#0;n#span#2;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#2;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#10496#10502#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#1;n#tr#0;n#table#0;n#td#1;n#tr#1;n#table#2;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#td#2;n#tr#1;n#table#2;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#td#2;n#tr#1;n#table#2;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#1;n#tr#0;n#table#0;n#td#2;n#tr#1;n#table#2;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#td#1;n#tr#0;n#table#0;n#td#2;n#tr#1;n#table#2;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1521802357340" expanded="true" signature="673:699" ph="SELECT * FRO... ACCESS_LOG" />
-                <marker date="1521802357340" expanded="true" signature="957:1197" ph="SELECT INS_D... ACCESS_LOG" />
-                <marker date="1521802357340" expanded="true" signature="1274:1543" ph="SELECT INS_D... ACCESS_LOG" />
-                <marker date="1521802357340" expanded="true" signature="1620:1887" ph="SELECT INS_D... ACCESS_LOG" />
-                <marker date="1521802357340" expanded="true" signature="1965:2094" ph="SELECT strft... " />
-                <marker date="1521802357340" expanded="true" signature="2340:2498" ph="SELECT strft... " />
-                <marker date="1521802357340" expanded="true" signature="2744:2900" ph="SELECT strft... " />
-                <marker date="1521802357340" expanded="true" signature="3150:3312" ph="SELECT strft... ACCESS_LOG" />
-                <marker date="1521802357340" expanded="true" signature="3552:3743" ph="SELECT strft... ACCESS_LOG" />
-                <marker date="1521802357340" expanded="true" signature="3983:4172" ph="SELECT strft... ACCESS_LOG" />
-                <marker date="1521802357340" expanded="true" signature="4407:4543" ph="SELECT ENGIN... ACCESS_LOG" />
-                <marker date="1521802357340" expanded="true" signature="4614:4769" ph="SELECT QUERY... ACCESS_LOG" />
-                <marker date="1521802357340" expanded="true" signature="4836:4946" ph="SELECT BROWS... ACCESS_LOG" />
-                <marker date="1521802357340" expanded="true" signature="5011:5111" ph="SELECT OS, C... ACCESS_LOG" />
-                <marker date="1521802357340" expanded="true" signature="5189:5301" ph="SELECT PAGE_... ACCESS_LOG" />
-                <marker date="1521802357340" expanded="true" signature="5384:5495" ph="SELECT PAGE_... ACCESS_LOG" />
-                <marker date="1521802357340" expanded="true" signature="5567:5675" ph="SELECT REFER... ACCESS_LOG" />
-                <marker date="1521802357340" expanded="true" signature="5885:6618" ph="..." />
-                <marker date="1521802357340" expanded="true" signature="5892:6528" ph="..." />
-                <marker date="1521802357340" expanded="true" signature="6040:6520" ph="..." />
-                <marker date="1521802357340" expanded="true" signature="6173:6223" ph="{...}" />
-                <marker date="1521802357340" expanded="true" signature="6240:6308" ph="{...}" />
-                <marker date="1521802357340" expanded="true" signature="6536:6618" ph="..." />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="26" selection-start-line="26" selection-start-column="2" selection-end-line="35" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logconfig.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/logconfig.php">
+      <file leaf-file-name="a.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fmanager/a.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding>
-                <marker date="1521801865249" expanded="true" signature="1489:1659" ph="CREATE TABLE... ACCESS_LOG" />
-                <marker date="1521801865249" expanded="true" signature="1686:2085" ph="create table... if" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-697">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="18" selection-end-column="54" />
-              <folding>
-                <marker date="1521801542580" expanded="true" signature="7402:7456" ph="SELECT ${{$c... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LGC_getDBlog.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/log/LGC_getDBlog.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1785">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1521195297000" expanded="true" signature="3348:3376" ph="SELECT ID FR... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="3888:3978" ph="SELECT ID FR... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="4248:4506" ph="SELECT INS_D... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="4772:5030" ph="SELECT INS_D... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="5290:5548" ph="SELECT INS_D... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="5703:5886" ph="SELECT INS_D... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="6295:6478" ph="SELECT INS_D... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="6880:7063" ph="SELECT INS_D... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="7362:7508" ph="SELECT strft... " />
-                <marker date="1521195297000" expanded="true" signature="7961:8107" ph="SELECT strft... " />
-                <marker date="1521195297000" expanded="true" signature="8551:8697" ph="SELECT strft... " />
-                <marker date="1521195297000" expanded="true" signature="9037:9151" ph="SELECT PAGE_... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="9418:9532" ph="SELECT PAGE_... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="9684:9822" ph="SELECT ENGIN... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="9977:10148" ph="SELECT ENGIN... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="10397:10576" ph="SELECT strft... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="11034:11213" ph="SELECT strft... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="11662:11841" ph="SELECT strft... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="12166:12278" ph="SELECT BROWS... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="12412:12514" ph="SELECT OS, C... ACCESS_LOG" />
-                <marker date="1521195297000" expanded="true" signature="12761:12887" ph="SELECT REFER... ACCESS_LOG" />
-              </folding>
+            <state relative-caret-position="357">
+              <caret line="21" column="109" selection-start-line="21" selection-start-column="109" selection-end-line="21" selection-end-column="144" />
             </state>
           </provider>
         </entry>
@@ -166,16 +35,17 @@
       <file leaf-file-name="log.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/log.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1853">
-              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#248#0#PHP" expanded="true" />
-                <marker date="1521790100823" expanded="true" signature="5636:5814" ph="INSERT INTO ACCESS_LOG... " />
-                <marker date="1521790100823" expanded="true" signature="5636:5939" ph="INSERT INTO ACCESS_LOG... " />
-                <marker date="1521790100823" expanded="true" signature="5636:5971" ph="INSERT INTO ACCESS_LOG... " />
-                <marker date="1521790100823" expanded="true" signature="5636:6160" ph="INSERT INTO ACCESS_LOG... " />
-                <marker date="1521790100823" expanded="true" signature="5636:6162" ph="INSERT INTO ACCESS_LOG... " />
-              </folding>
+            <state relative-caret-position="2397">
+              <caret line="141" column="19" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DISP_data.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/log/DISP_data.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3672">
+              <caret line="216" column="92" selection-start-line="216" selection-start-column="92" selection-end-line="216" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -198,74 +68,82 @@
       <find>EUC</find>
       <find>httpHeadersPrint</find>
       <find>getRequestParams</find>
+      <find>$fetch_day_u</find>
     </findStrings>
     <dirStrings>
       <dir>C:\wamp64\www\log</dir>
     </dirStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/log.php" />
-        <option value="$PROJECT_DIR$/log/index.php" />
-        <option value="$PROJECT_DIR$/fmanager/DISP_listview.php" />
         <option value="$PROJECT_DIR$/fmanager/index.php" />
-        <option value="$PROJECT_DIR$/fmanager/LGC_delfile.php" />
         <option value="$PROJECT_DIR$/fmanager/csv.php" />
         <option value="$PROJECT_DIR$/common/sqlite3Ope.php" />
         <option value="$PROJECT_DIR$/common/config.php" />
-        <option value="$PROJECT_DIR$/common/logconfig.php" />
         <option value="$PROJECT_DIR$/common/util_lib.php" />
+        <option value="$PROJECT_DIR$/fmanager/LGC_delfile.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/log/index.php" />
+        <option value="$PROJECT_DIR$/common/logconfig.php" />
+        <option value="$PROJECT_DIR$/log.php" />
+        <option value="$PROJECT_DIR$/HTML_function.php" />
+        <option value="$PROJECT_DIR$/fmanager/DISP_listview.php" />
+        <option value="$PROJECT_DIR$/log/DISP_data.php" />
         <option value="$PROJECT_DIR$/fmanager/file.php" />
+        <option value="$PROJECT_DIR$/fmanager/a.php" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="log" type="b2602c69:ProjectViewProjectNode" />
-              <item name="log" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="logvv_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logvv_demo" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="log" type="b2602c69:ProjectViewProjectNode" />
-              <item name="log" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="logvv_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logvv_demo" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="common" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="log" type="b2602c69:ProjectViewProjectNode" />
-              <item name="log" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="logvv_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logvv_demo" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="fmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="logvv_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logvv_demo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="log" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -274,9 +152,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -290,9 +168,6 @@
       </list>
     </option>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -304,34 +179,38 @@
       <option name="presentableId" value="Default" />
       <updated>1521783147070</updated>
       <workItem from="1521783148363" duration="19422000" />
+      <workItem from="1523113050972" duration="3609000" />
+      <workItem from="1523117158708" duration="1642000" />
+      <workItem from="1523193011881" duration="2349000" />
+      <workItem from="1523199471001" duration="1756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19422000" />
+    <option name="totallyTimeSpent" value="28778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32913387" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,213 +219,235 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/fmanager/file.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="978">
-          <caret line="431" column="0" lean-forward="true" selection-start-line="431" selection-start-column="0" selection-end-line="431" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="26" selection-start-column="2" selection-end-line="35" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fmanager/DISP_listview.php">
+    <entry file="file://$PROJECT_DIR$/log.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="89" column="62" lean-forward="false" selection-start-line="89" selection-start-column="62" selection-end-line="89" selection-end-column="62" />
-          <folding />
+        <state relative-caret-position="2397">
+          <caret line="141" column="19" lean-forward="true" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/DISP_data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3672">
+          <caret line="216" column="92" selection-start-line="216" selection-start-column="92" selection-end-line="216" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fmanager/file.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fmanager/file.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fmanager/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/util_lib.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3043">
+          <caret line="179" column="71" lean-forward="true" selection-start-line="179" selection-start-column="71" selection-end-line="179" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/DISP_data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="34" lean-forward="true" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fmanager/LGC_delfile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/logconfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fmanager/file.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9690">
+          <caret line="570" column="16" lean-forward="true" selection-start-line="570" selection-start-column="16" selection-end-line="570" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="978">
+          <caret line="431" lean-forward="true" selection-start-line="431" selection-end-line="431" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fmanager/csv.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="2" selection-end-line="39" selection-end-column="3" />
-          <folding>
-            <marker date="1521791680608" expanded="true" signature="1130:1185" ph="SELECT * FRO... ACCESS_LOG" />
-          </folding>
+          <caret line="35" selection-start-line="35" selection-start-column="2" selection-end-line="39" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log/LGC_getDBlog.php">
+    <entry file="file://$PROJECT_DIR$/common/authOpe.php" />
+    <entry file="file://$PROJECT_DIR$/common/tmpl2.class.php" />
+    <entry file="file://$PROJECT_DIR$/common/config.php" />
+    <entry file="file://$PROJECT_DIR$/common/util_lib.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1785">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1521195297000" expanded="true" signature="3348:3376" ph="SELECT ID FR... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="3888:3978" ph="SELECT ID FR... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="4248:4506" ph="SELECT INS_D... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="4772:5030" ph="SELECT INS_D... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="5290:5548" ph="SELECT INS_D... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="5703:5886" ph="SELECT INS_D... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="6295:6478" ph="SELECT INS_D... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="6880:7063" ph="SELECT INS_D... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="7362:7508" ph="SELECT strft... " />
-            <marker date="1521195297000" expanded="true" signature="7961:8107" ph="SELECT strft... " />
-            <marker date="1521195297000" expanded="true" signature="8551:8697" ph="SELECT strft... " />
-            <marker date="1521195297000" expanded="true" signature="9037:9151" ph="SELECT PAGE_... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="9418:9532" ph="SELECT PAGE_... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="9684:9822" ph="SELECT ENGIN... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="9977:10148" ph="SELECT ENGIN... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="10397:10576" ph="SELECT strft... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="11034:11213" ph="SELECT strft... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="11662:11841" ph="SELECT strft... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="12166:12278" ph="SELECT BROWS... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="12412:12514" ph="SELECT OS, C... ACCESS_LOG" />
-            <marker date="1521195297000" expanded="true" signature="12761:12887" ph="SELECT REFER... ACCESS_LOG" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="179" column="71" selection-start-line="179" selection-start-column="71" selection-end-line="179" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log.php">
+    <entry file="file://$PROJECT_DIR$/fmanager/LGC_delfile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1853">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#248#0#PHP" expanded="true" />
-            <marker date="1521790100823" expanded="true" signature="5636:5814" ph="INSERT INTO ACCESS_LOG... " />
-            <marker date="1521790100823" expanded="true" signature="5636:5939" ph="INSERT INTO ACCESS_LOG... " />
-            <marker date="1521790100823" expanded="true" signature="5636:5971" ph="INSERT INTO ACCESS_LOG... " />
-            <marker date="1521790100823" expanded="true" signature="5636:6160" ph="INSERT INTO ACCESS_LOG... " />
-            <marker date="1521790100823" expanded="true" signature="5636:6162" ph="INSERT INTO ACCESS_LOG... " />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log/index.php">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/authOpe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/tmpl2.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-867">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/sqlite3Ope.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="112" column="51" lean-forward="false" selection-start-line="112" selection-start-column="51" selection-end-line="112" selection-end-column="51" />
-          <folding>
-            <element signature="n#setFilepath#0;n#sqlite3Ope#0;n#!!top" expanded="false" />
-            <element signature="n#setCreateSQL#0;n#sqlite3Ope#0;n#!!top" expanded="false" />
-            <marker date="1521797127667" expanded="true" signature="4849:5192" ph="INSERT INTO `ACCESS_LOG`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-697">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="18" selection-end-column="54" />
-          <folding>
-            <marker date="1521801542580" expanded="true" signature="7402:7456" ph="SELECT ${{$c... " />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/logconfig.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/sqlite3Ope.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
           <folding>
-            <marker date="1521801865249" expanded="true" signature="1489:1659" ph="CREATE TABLE... ACCESS_LOG" />
-            <marker date="1521801865249" expanded="true" signature="1686:2085" ph="create table... if" />
+            <element signature="n#setFilepath#0;n#sqlite3Ope#0;n#!!top" />
+            <element signature="n#setCreateSQL#0;n#sqlite3Ope#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML_function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fmanager/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="374">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fmanager/DISP_listview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="101" column="21" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2397">
+          <caret line="141" column="19" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/log/DISP_data.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="32" column="34" lean-forward="true" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/util_lib.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-986">
-          <caret line="179" column="105" lean-forward="false" selection-start-line="179" selection-start-column="105" selection-end-line="179" selection-end-column="105" />
-          <folding />
+        <state relative-caret-position="3672">
+          <caret line="216" column="92" selection-start-line="216" selection-start-column="92" selection-end-line="216" selection-end-column="92" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fmanager/file.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="570" column="16" lean-forward="true" selection-start-line="570" selection-start-column="16" selection-end-line="570" selection-end-column="16" />
-          <folding>
-            <element signature="e#7414#7420#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#2;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#2;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#10404#10410#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#span#2;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#2;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#10496#10502#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#0;n#table#0;n#td#1;n#tr#1;n#table#2;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#td#2;n#tr#1;n#table#2;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#td#2;n#tr#1;n#table#2;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#0;n#table#0;n#td#2;n#tr#1;n#table#2;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#td#1;n#tr#0;n#table#0;n#td#2;n#tr#1;n#table#2;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1521802357340" expanded="true" signature="673:699" ph="SELECT * FRO... ACCESS_LOG" />
-            <marker date="1521802357340" expanded="true" signature="957:1197" ph="SELECT INS_D... ACCESS_LOG" />
-            <marker date="1521802357340" expanded="true" signature="1274:1543" ph="SELECT INS_D... ACCESS_LOG" />
-            <marker date="1521802357340" expanded="true" signature="1620:1887" ph="SELECT INS_D... ACCESS_LOG" />
-            <marker date="1521802357340" expanded="true" signature="1965:2094" ph="SELECT strft... " />
-            <marker date="1521802357340" expanded="true" signature="2340:2498" ph="SELECT strft... " />
-            <marker date="1521802357340" expanded="true" signature="2744:2900" ph="SELECT strft... " />
-            <marker date="1521802357340" expanded="true" signature="3150:3312" ph="SELECT strft... ACCESS_LOG" />
-            <marker date="1521802357340" expanded="true" signature="3552:3743" ph="SELECT strft... ACCESS_LOG" />
-            <marker date="1521802357340" expanded="true" signature="3983:4172" ph="SELECT strft... ACCESS_LOG" />
-            <marker date="1521802357340" expanded="true" signature="4407:4543" ph="SELECT ENGIN... ACCESS_LOG" />
-            <marker date="1521802357340" expanded="true" signature="4614:4769" ph="SELECT QUERY... ACCESS_LOG" />
-            <marker date="1521802357340" expanded="true" signature="4836:4946" ph="SELECT BROWS... ACCESS_LOG" />
-            <marker date="1521802357340" expanded="true" signature="5011:5111" ph="SELECT OS, C... ACCESS_LOG" />
-            <marker date="1521802357340" expanded="true" signature="5189:5301" ph="SELECT PAGE_... ACCESS_LOG" />
-            <marker date="1521802357340" expanded="true" signature="5384:5495" ph="SELECT PAGE_... ACCESS_LOG" />
-            <marker date="1521802357340" expanded="true" signature="5567:5675" ph="SELECT REFER... ACCESS_LOG" />
-            <marker date="1521802357340" expanded="true" signature="5885:6618" ph="..." />
-            <marker date="1521802357340" expanded="true" signature="5892:6528" ph="..." />
-            <marker date="1521802357340" expanded="true" signature="6040:6520" ph="..." />
-            <marker date="1521802357340" expanded="true" signature="6173:6223" ph="{...}" />
-            <marker date="1521802357340" expanded="true" signature="6240:6308" ph="{...}" />
-            <marker date="1521802357340" expanded="true" signature="6536:6618" ph="..." />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="26" selection-start-line="26" selection-start-column="2" selection-end-line="35" selection-end-column="3" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fmanager/a.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="109" selection-start-line="21" selection-start-column="109" selection-end-line="21" selection-end-column="144" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="Copyright.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

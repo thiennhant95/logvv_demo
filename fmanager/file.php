@@ -23,6 +23,19 @@ $fetch = $dbh->fetch($total_sql);
 
 $total_u_sql = $total_sql."WHERE (UNIQUE_FLG == '1')";
 
+
+//foreach ($fetch as $row)
+//{
+//    $fetch_u=array();
+//    $i=0;
+//    if ($row['UNIQUE_FLG']==1)
+//    {
+//        $fetch_u[$i]['UNIQUE_FLG']=$row['UNIQUE_FLG'];
+//        $i++;
+//    }
+//}
+//print_r($fetch_u);
+//die();
 $fetch_u = $dbh->fetch($total_u_sql);
 
 

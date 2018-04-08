@@ -214,7 +214,7 @@ window.alert("")
 
 		  <td height="30" align="center" background="images/m_d_access_back.gif">
 			SỐ LƯỢT XEM TRANG: <b><font color="#003399" size="3"><?php echo count($fetch);?></font></b><br>
-			SỐ LƯỢT TRUY CẬP : <b><font color="#003399" size="3"><?php echo count($fetch_uu)+(count($fetch_uu)==null?'0':'1')?></font></b>
+			SỐ LƯỢT TRUY CẬP : <b><font color="#003399" size="3"><?php echo count($fetch_uu)?></font></b>
 			</td>
 			</tr>
 			<tr>
@@ -769,7 +769,7 @@ window.alert("")
     .topnav a {
         float: left;
         display: block;
-        color: #f2f2f2;
+        color: white;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;

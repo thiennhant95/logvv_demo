@@ -46,7 +46,7 @@ if(!empty($_GET["referrer"])){
 
 #----------------------------------------------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------------------------------------------
-$_SERVER['HTTP_REFERER']='http://www.google.com/search?hl=en&q=learn+php+2&client=firefox';
+//$_SERVER['HTTP_REFERER']='http://www.google.com/search?hl=en&q=learn+php+2&client=firefox';
 $file_info	= parse_url($_SERVER['HTTP_REFERER']);
 //$file_info = isset($_SERVER['HTTP_REFERER']) ? parse_url($_SERVER['HTTP_REFERER']) : '';
 

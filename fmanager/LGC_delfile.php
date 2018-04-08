@@ -14,11 +14,6 @@ extract($db->getRequestParams("post",array(8,7,1,4),true));
 if(!strstr($filename,"access_log_db")||empty($filename)){
 	die("Not found.<br>{$res_id}");
 }
-
-////////////////////////////////////////////////////////////////
-// �����ե�����δ������
-
-	// ���ե�����κ��
 	if(file_exists(ACCESS_PATH.$filename)){
 		unlink(ACCESS_PATH.$filename) or die("Deleted");
 	}

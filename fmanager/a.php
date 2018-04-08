@@ -1,19 +1,19 @@
 <?php
-    function DispAccesslog(){
-        global $inc_file_path;
+function DispAccesslog(){
+    global $inc_file_path;
 
-        $html = "";
+    $html = "";
 
-        if(!empty($_POST['act'])){
-            return $html;
-        }
+    if(!empty($_POST['act'])){
+        return $html;
+    }
 
-        $link_type = "log.php";
+    $link_type = "log.php";
 
-        //----------------//
-        $top_path = $inc_file_path;
+    //----------------//
+    $top_path = $inc_file_path;
 
-        $html = <<<EDIT
+    $html = <<<EDIT
     <script type="text/javascript" src="https://www.google.com/jsapi?key="></script>
     <script src="https://api.all-internet.jp/accesslog/access.js" language="javascript" type="text/javascript"></script>
     <script language="JavaScript" type="text/javascript" charset="UTF-8">
@@ -23,7 +23,7 @@
     //-->
     </script>
 EDIT;
-        return $html;
-    }
+    return $html;
+}
 
 ?>
