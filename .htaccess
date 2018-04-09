@@ -3,6 +3,6 @@ SetEnvIf HTTP_HOST testsite.local APPLICATION_ENV=development
   Allow from all
   AuthType Basic
   AuthName "Log Access - Login"
-  AuthUserFile C:\xampp\htdocs\logvv_demo\.htpasswd
+  AuthUserFile C:\wamp64\www\log_access\.htpasswd
   require valid-user
 </IfDefine>

@@ -8,7 +8,7 @@ include ('HTML_function.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Level HTML Template</title>
+    <title>TEST LOG ACCESS</title>
 <!--
 
 Template 2095 Level
@@ -43,7 +43,7 @@ http://www.tooplate.com/view/2095-level
                         <nav class="navbar navbar-expand-lg narbar-light">
                             <a class="navbar-brand mr-auto" href="#">
                                 <img src="img/logo.png" alt="Site logo">
-                                Level
+                                TEST LOG ACCESS
                             </a>
                             <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
@@ -370,9 +370,9 @@ http://www.tooplate.com/view/2095-level
                 <div class="container">
                     <div class="row">
                         <p class="col-sm-12 text-center tm-font-light tm-color-white p-4 tm-margin-b-0">
-                        Copyright &copy; <span class="tm-current-year">2018</span> Your Company
+                        Copyright &copy; <span class="tm-current-year">2018</span> VV_Company
 
-                        - Designed by <a href="http://www.tooplate.com" class="tm-color-primary tm-font-normal" target="_parent">Tooplate</a></p>
+<!--                        - Designed by <a href="http://www.tooplate.com" class="tm-color-primary tm-font-normal" target="_parent">Tooplate</a></p>-->
                     </div>
                 </div>
             </footer>

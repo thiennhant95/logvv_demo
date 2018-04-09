@@ -40,7 +40,7 @@ $sql = '
 $dbh = new sqlite3Ope();
 $create=$dbh->sqlite3Ope(ACCESS_PATH.$filename,CREATE_SQL1);
 $fetchLogList = $dbh->get($sql);
-$data = "REMOTE_ADDR,REFERER,QUERY_STRING,ENGINE,OS,BROWSER,URL,NS_DATE,TIME\n";
+$data = "REMOTE ADDR,REFERER,KEYWORD,ENGINE,OS,BROWSER,URL,NS_DATE,TIME\n";
 
 while($row=$fetchLogList->fetchArray()){
     if ($row['DEL_FLG']==0) {

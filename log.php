@@ -31,7 +31,7 @@ $browser = $browser->getBrowser();
 #--------------------------------------------------------------------------------------------------------
 
 $host_addr = $_SERVER["HTTP_HOST"];
-$_GET["referrer"]="http://www.google.com/search?hl=en&q=abc+song&client=firefox";
+//$_GET["referrer"]="https://coccoc.com/search#query=viet+vang";
 //$host_addr = "all-internet.jp";
 
 $ref_info	= parse_url($_GET["referrer"]);

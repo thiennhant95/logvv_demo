@@ -223,7 +223,7 @@ window.alert("")
 			<tr>
 
 		  <td height="30" align="center" background="images/m_d_access_back.gif">
-			<b><font color="#003399" size="3">Lượt Xem Trang: <?php echo count($TodayCnt);?></font></b>&nbsp;&nbsp;
+			<b><font color="#003399" size="2">Lượt Xem Trang: <?php echo count($TodayCnt);?></font></b>&nbsp;&nbsp;
 			</td>
 			</tr>
             <?php
@@ -309,7 +309,7 @@ window.alert("")
             <br>
             <table width="553" cellpadding="0" cellspacing="1" border="0" bgcolor="#000000">
                 <tr bgcolor="white">
-                    <td align="left" colspan="4"><b style=" text-align:center;color:#0B0D60;font-size: 15px;font-family: Avenir, Helvetica, sans-serif">100 LƯỢT TRUY CẬP MỚI NHẤT TRONG NGÀY <?php echo date('d-m') ?></b></td>
+                    <td align="left" colspan="4"><b style=" text-align:center;color:#0B0D60;font-size: 15px;font-family: Avenir, Helvetica, sans-serif">1000 LƯỢT TRUY CẬP MỚI NHẤT TRONG NGÀY <?php echo date('d-m') ?></b></td>
                 </tr>
                     <th bgcolor="white">REMOTE ADDR</th>
                     <th bgcolor="white">COUNTRY/ CITY</th>

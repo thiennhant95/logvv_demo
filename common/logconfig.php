@@ -18,7 +18,7 @@ define('ALERT_MAIL_SEND',1);
 #=================================================================================
 $date_name = date('Y_m');
 
-define('ACCESS_PATH',$_SERVER['DOCUMENT_ROOT']."/logvv_demo/");
+define('ACCESS_PATH',$_SERVER['DOCUMENT_ROOT']."/log_access/");
 define('DB_FILEPATH',ACCESS_PATH.$date_name."_access_log_db");
 define('CREATE_SQL',"CREATE TABLE ACCESS_LOG(ID INTEGER PRIMARY KEY,REMOTE_ADDR,USER_AGENT,REFERER,QUERY_STRING,ENGINE,OS,BROWSER,PAGE_URL,UNIQUE_FLG,USER_FLG,INS_DATE,TIME,DEL_FLG DEFAULT 0);");
 define('CREATE_SQL1','create table if not exists `ACCESS_LOG` (

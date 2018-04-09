@@ -485,12 +485,12 @@ $fetch_ref = $referen;
                         <br>
                         <table width="100%" border="0">
                             <tr>
-                                <td align="left" valign="bottom" colspan="3"><span class="style2"><strong>SỐ LẦN XEM TRANG：</strong><?php echo count($fetch);?><br><!--<strong>ユニークPV：</strong><?php //echo count($fetch_u);?><br>--><strong>SỐ NGƯỜI TRUY CẬP:</strong><?php echo count($fetch_uu);?></span></td>
+                                <td align="left" valign="bottom" colspan="3"><span class="style2"><strong>SỐ LẦN XEM TRANG：</strong><?php echo count($fetch);?><br><!--<strong>ユニークPV：</strong><?php //echo count($fetch_u);?><br>--><strong>SỐ LẦN TRUY CẬP:</strong><?php echo count($fetch_uu);?></span></td>
                                 <!--<td>&nbsp;</td>-->
                             </tr>
                             <tr style="margin-top:10px;">
 
-                                <td width="33%" valign="top"><span class="style2"><strong>SỐ LẦN TRUY CẬP THEO NGÀY：</strong></span>
+                                <td width="33%" valign="top"><span class="style2"><strong>TRUY CẬP THEO NGÀY：</strong></span>
                                     <?php
                                     $fetch_max = 0;
                                     for($i=0;$i<count($fetch_day);$i++){
