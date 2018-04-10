@@ -429,6 +429,36 @@ function engine_access(){
     return $engine;
 }
 
+function engine_access_u(){
+
+    $page_url_array= array();
+    $fetch=access();
+    foreach ($fetch as $key_fetch => $row_fetch) {
+        if ($row_fetch['ENGINE'] != '') {
+            if ($row_fetch['UNIQUE_FLG'] == 1) {
+                // Add to the current group count if it exists
+                if (isset($page_url_array[$row_fetch['ENGINE']])) {
+                    $page_url_array[$row_fetch['ENGINE']]++;
+                } // or initialize to 1 if it doesn't exist
+                else $page_url_array[$row_fetch['ENGINE']] = 1;
+
+                // Or the ternary one-liner version
+                // instead of the preceding if/else block
+                $page_url_array[$row_fetch['ENGINE']] = isset($page_url_array[$row_fetch['ENGINE']]) ? $page_url_array[$row_fetch['ENGINE']]++ : 1;
+                arsort($page_url_array);
+                $page_url = array();
+                $i = 0;
+                foreach ($page_url_array as $key_1 => $row) {
+                    $page_url[$i]['ENGINE'] = $key_1;
+                    $page_url[$i]['CNT'] = $row;
+                    $i++;
+                }
+            }
+        }
+    }
+    return $page_url;
+}
+
 #-----------------------------------------------
 function access_query(){
 
@@ -566,6 +596,39 @@ function bro_access(){
     return $fetch_bro =  $browser;
 }
 
+#-----------------------------------------
+function bro_access_u(){
+
+    $browser_array= array();
+    $fetch=access();
+    foreach ($fetch as $key_fetch => $row_fetch) {
+        if ($row_fetch['BROWSER'] != '' && $row_fetch['UNIQUE_FLG']=='1') {
+            // Add to the current group count if it exists
+            if (isset($browser_array[$row_fetch['BROWSER']])) {
+                $browser_array[$row_fetch['BROWSER']]++;
+            } // or initialize to 1 if it doesn't exist
+            else $browser_array[$row_fetch['BROWSER']] = 1;
+
+            // Or the ternary one-liner version
+            // instead of the preceding if/else block
+            $browser_array[$row_fetch['BROWSER']] = isset($browser_array[$row_fetch['BROWSER']]) ? $browser_array[$row_fetch['BROWSER']]++ : 1;
+            arsort($browser_array);
+            array_slice($browser_array, 0, 3);
+            $browser = array();
+            $i=0;
+            foreach ($browser_array as $key_1 => $row)
+            {
+                $browser[$i]['BROWSER']=$key_1;
+                $browser[$i]['CNT']=$row;
+                $i++;
+            }
+        }
+    }
+
+
+    return $fetch_bro =  $browser;
+}
+
 #-------------------------------------
 function os_access(){
     $os_array= array();
@@ -595,6 +658,37 @@ function os_access(){
     }
 
      return $fetch_os = $os;
+}
+
+#----------------------------------------
+function os_access_u(){
+    $os_array= array();
+    $fetch=access();
+    foreach ($fetch as $key_fetch => $row_fetch) {
+        if ($row_fetch['OS'] != '' && $row_fetch['UNIQUE_FLG']=='1') {
+            // Add to the current group count if it exists
+            if (isset($os_array[$row_fetch['OS']])) {
+                $os_array[$row_fetch['OS']]++;
+            } // or initialize to 1 if it doesn't exist
+            else $os_array[$row_fetch['OS']] = 1;
+
+            // Or the ternary one-liner version
+            // instead of the preceding if/else block
+            $os_array[$row_fetch['OS']] = isset($os_array[$row_fetch['OS']]) ? $os_array[$row_fetch['OS']]++ : 1;
+            arsort($os_array);
+            array_slice($os_array, 0, 3);
+            $os = array();
+            $i=0;
+            foreach ($os_array as $key_1 => $row)
+            {
+                $os[$i]['OS']=$key_1;
+                $os[$i]['CNT']=$row;
+                $i++;
+            }
+        }
+    }
+
+    return $fetch_os = $os;
 }
 
 #--------------------------------------
@@ -628,6 +722,36 @@ function ref_access(){
     return $fetch_ref = $referen;
 }
 
+#-----------------------------------------------
+function ref_access_u(){
+
+    $referen_array= array();
+    $fetch=access();
+    foreach ($fetch as $key_fetch => $row_fetch) {
+        if ($row_fetch['REFERER'] != '' && $row_fetch['UNIQUE_FLG']=='1') {
+            // Add to the current group count if it exists
+            if (isset($referen_array[$row_fetch['REFERER']])) {
+                $referen_array[$row_fetch['REFERER']]++;
+            } // or initialize to 1 if it doesn't exist
+            else $referen_array[$row_fetch['REFERER']] = 1;
+
+            // Or the ternary one-liner version
+            // instead of the preceding if/else block
+            $referen_array[$row_fetch['REFERER']] = isset($referen_array[$row_fetch['REFERER']]) ? $referen_array[$row_fetch['REFERER']]++ : 1;
+            arsort($referen_array);
+            array_slice($referen_array, 0, 3);
+            $referen= array();
+            $i=0;
+            foreach ($referen_array as $key_1 => $row)
+            {
+                $referen[$i]['REFERER']=$key_1;
+                $referen[$i]['CNT']=$row;
+                $i++;
+            }
+        }
+    }
+    return $fetch_ref = $referen;
+}
 #-----------------------------------------------
 if(empty($term)){
     $dbh = new sqlite3Ope(SQLITE3_OPEN_READWRITE);
@@ -664,22 +788,26 @@ switch ($_POST["mode"]):
 		break;
 	case "page":
 			$fetchURL = page_access();
-			//$fetchURL_u = page_u_access();
+			$fetchURL_u = page_u_access();
 		break;
 	case "engine":
 			$fetchENGINE = engine_access();
+            $fetchENGINE_u = engine_access_u();
 		break;
 	case "query":
 			$fetchQuery = access_query();
 		break;
 	case "bro":
 			$fetch_bro = bro_access();
+            $fetch_bro_u= bro_access_u();
 		break;
 	case "os":
 			$fetch_os = os_access();
+            $fetch_os_u = os_access_u();
 		break;
 	case "ref":
 			$fetch_ref = ref_access();
+            $fetch_ref_u = ref_access_u();
 		break;
 	case "all":
 			$fetch_day = day_access();
@@ -695,12 +823,16 @@ switch ($_POST["mode"]):
 			//$fetch_dayofweek_u = dayofweek_u_access();
 			$fetch_dayofweek_uu = dayofweek_uu_access();
 			$fetchURL = page_access();
-			//$fetchURL_u = page_u_access();
+			$fetchURL_u = page_u_access();
 			$fetchENGINE = engine_access();
+            $fetchENGINE_u = engine_access_u();
 			$fetchQuery = access_query();
 			$fetch_bro = bro_access();
+            $fetch_bro_u= bro_access_u();
 			$fetch_os = os_access();
+            $fetch_os_u = os_access_u();
 			$fetch_ref = ref_access();
+            $fetch_ref_u = ref_access_u();
 	default:
 			$fetch_day = day_access();
 			//$fetch_day_u = day_u_access();

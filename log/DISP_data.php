@@ -410,6 +410,7 @@ window.alert("")
 				<td align="left" colspan="2"><img src="images/menu_03_on.jpg"></td>
 			</tr>
 			<?php for($i=0;$i<=23;$i++):
+//                if (isset($fetch_time[$i]) || isset($fetch_time_uu[$i])):
                 ?>
 			<tr bgcolor="#FFFFFF">
 				<td width="10%" align="center" height="25">
@@ -435,6 +436,7 @@ window.alert("")
 				</td>
 			</tr>
 			<?php
+//			endif;
 			endfor;?>
 		</table>
 		<?php endif;?>
@@ -519,6 +521,17 @@ window.alert("")
                 if (isset($fetchURL[$i]['CNT']))
 				$fetch_sum += $fetchURL[$i]['CNT'];
 			}
+
+            $fetch_max_u = 0;
+            for($i=0;$i<=count($fetchURL_u);$i++){
+                if (isset($fetchURL_u[$i]['CNT']))
+                    if($fetch_max_u <= $fetchURL_u[$i]['CNT'])$fetch_max_u = $fetchURL_u[$i]['CNT'];
+            }
+            $fetch_sum_u = 0;
+            for($i=0;$i<=count($fetchURL_u);$i++){
+                if (isset($fetchURL_u[$i]['CNT']))
+                    $fetch_sum_u += $fetchURL_u[$i]['CNT'];
+            }
 			?>
 		<br>
 		<table width="553" cellpadding="0" cellspacing="1" border="0" bgcolor="#000000">
@@ -536,13 +549,28 @@ window.alert("")
 			</tr>
 			<tr bgcolor="#FAFAFA">
 				<td height="25" align="left" bgcolor="#FAFAFA">
+                    <br>
 				<?php
 					$width = @round($fetchURL[$i]['CNT']/$fetch_max * 100);
 				?>
 				<img src="images/bar.gif" width="<?php echo $width*3;?>" height="10" align="left">&nbsp;
 				<?php echo round($fetchURL[$i]['CNT']/$fetch_sum * 100);?>%
 				<?php echo "(".$fetchURL[$i]['CNT']." Lượt)";?>
-
+                    <?php
+                    if (isset($fetchURL_u[$i])):
+                    ?>
+                    <br>
+                    <?php
+                    $width = @round($fetchURL_u[$i]['CNT']/$fetch_max * 100);
+                    ?>
+                    <img src="images/bar_uu.gif" width="<?php echo $width*3;?>" height="10" align="left">&nbsp;
+                    <?php echo round($fetchURL_u[$i]['CNT']/$fetch_sum_u * 100);?>%
+                    <?php echo "(".$fetchURL_u[$i]['CNT']." Lượt)";?>
+                    <?php
+                    endif;
+                    ?>
+                    <br>
+                    <br>
 				</td>
 			</tr>
 			<?php endfor;?>
@@ -560,6 +588,11 @@ window.alert("")
 			    if (isset($fetchENGINE[$i]['CNT']))
 				$fetch_sum += $fetchENGINE[$i]['CNT'];
 			}
+            $fetch_sum_u = 0;
+            for($i=0;$i<=count($fetchENGINE_u);$i++){
+                if (isset($fetchENGINE_u[$i]['CNT']))
+                    $fetch_sum_u += $fetchENGINE_u[$i]['CNT'];
+            }
 			?>
 		<br>
 		<table width="553" cellpadding="0" cellspacing="1" border="0" bgcolor="#000000">
@@ -575,13 +608,20 @@ window.alert("")
 				</td>
 			</tr>
 			<tr bgcolor="#FAFAFA">
-				<td height="25" align="left" bgcolor="#FAFAFA">
+				<td height="25" align="left" bgcolor="#FAFAFA"><br>
 				<?php
 					$width = @round($fetchENGINE[$i]['CNT']/$fetch_max * 100);
 				?>
 				<img src="images/bar.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
 				<?php echo round($fetchENGINE[$i]['CNT']/$fetch_sum * 100);?>%<?php echo "(".$fetchENGINE[$i]['CNT']." Lượt)";?>
-				</td>
+                 <br>
+                    <?php
+                    $width = @round($fetchENGINE_u[$i]['CNT']/$fetch_max * 100);
+                    ?>
+                    <img src="images/bar_uu.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
+                    <?php echo round($fetchENGINE_u[$i]['CNT']/$fetch_sum_u * 100);?>%<?php echo "(".$fetchENGINE_u[$i]['CNT']." Lượt)";?>
+                    <br><br>
+                </td>
 			</tr>
 			<?php endfor;?>
 		</table>
@@ -633,7 +673,16 @@ window.alert("")
 <?php
 	}
 ?>
-
+            <?php
+            if(!empty($fetch_bro_u)):
+            $sum_bro_u=0;
+            for ($i=0;$i<=count($fetch_bro_u);$i++)
+            {
+                if (isset($fetch_bro_u[$i]['CNT']))
+                    $sum_bro_u += $fetch_bro_u[$i]['CNT'];
+            }
+            endif;
+            ?>
 		<?php if(!empty($fetch_bro)):?>
 		<?php $fetch_max = $fetch_bro[0]['CNT'];?>
 		<br>
@@ -649,12 +698,24 @@ window.alert("")
 				</td>
 			</tr>
 			<tr bgcolor="#FAFAFA">
-				<td height="25" align="left" bgcolor="#FAFAFA">
+				<td height="25" align="left" bgcolor="#FAFAFA"> <br/>
+
 				<?php
 					$width = @round($fetch_bro[$i]['CNT']/$fetch_max * 100);
 				?>
 				<img src="images/bar.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
 				<?php echo round($fetch_bro[$i]['CNT']/count($fetch) * 100);?>%<?php echo "(".$fetch_bro[$i]['CNT']." Lượt)";?>
+                    <br/>
+                    <?php
+                    if (isset($fetch_bro_u[$i])):
+                    $width = @round($fetch_bro_u[$i]['CNT']/$fetch_max * 100);
+                    ?>
+                    <img src="images/bar_uu.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
+                    <?php echo round($fetch_bro_u[$i]['CNT']/$sum_bro_u * 100);?>%<?php echo "(".$fetch_bro_u[$i]['CNT']." Lượt)";?>
+                    <?php
+                    endif;
+                    ?>
+                    <br/>    <br/>
 				</td>
 			</tr>
 			<?php endfor;?>
@@ -676,12 +737,26 @@ window.alert("")
 				</td>
 			</tr>
 			<tr bgcolor="#FAFAFA">
-				<td height="25" align="left" bgcolor="#FAFAFA">
+				<td height="25" align="left" bgcolor="#FAFAFA"> <br>
 				<?php
 					$width = @round($fetch_os[$i]['CNT']/$fetch_max * 100);
 				?>
 				<img src="images/bar.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
 				<?php echo round($fetch_os[$i]['CNT']/count($fetch) * 100);?>%<?php echo "(".$fetch_os[$i]['CNT']." Lượt)";?>
+                    <?php
+                    if (isset($fetch_os_u[$i]))
+                    {
+                        ?>
+                        <br>
+                        <?php
+                        $width = @round($fetch_os_u[$i]['CNT']/$fetch_max * 100);
+                        ?>
+                        <img src="images/bar_uu.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
+                        <?php echo round($fetch_os_u[$i]['CNT']/count($fetch) * 100);?>%<?php echo "(".$fetch_os_u[$i]['CNT']." Lượt)";?>
+                    <?php
+                    }
+                    ?>
+                    <br><br>
 				</td>
 			</tr>
 			<?php endfor;?>
@@ -694,6 +769,10 @@ window.alert("")
 			for($i=0;$i<count($fetch_ref);$i++){
 				$fetch_sum += $fetch_ref[$i]['CNT'];
 			}
+            $fetch_sum_u = 0;
+            for($i=0;$i<count($fetch_ref_u);$i++){
+                $fetch_sum_u += $fetch_ref_u[$i]['CNT'];
+            }
 			?>
 		<br>
 		<table width="553" cellpadding="0" cellspacing="1" border="0" bgcolor="#000000">
@@ -709,12 +788,25 @@ window.alert("")
 			</tr>
 			<tr bgcolor="#FAFAFA">
 				<td height="25" align="left" bgcolor="#FAFAFA">
+                    <br>
 				<?php
 					$width = @round($fetch_ref[$i]['CNT']/$fetch_max * 100);
 				?>
 				<img src="images/bar.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
 				<?php echo round($fetch_ref[$i]['CNT']/$fetch_sum * 100);?>%<?php echo "(".$fetch_ref[$i]['CNT']." Lượt)";?>
-				</td>
+                    <br>
+                    <?php
+                    if (isset($fetch_ref_u[$i])):
+                    $width = @round($fetch_ref_u[$i]['CNT']/$fetch_max * 100);
+                    ?>
+                    <img src="images/bar_uu.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
+                    <?php echo round($fetch_ref_u[$i]['CNT']/$fetch_sum_u * 100);?>%<?php echo "(".$fetch_ref_u[$i]['CNT']." Lượt)";?>
+                    <?php
+                    endif;
+                    ?>
+                    <br>
+                    <br>
+                </td>
 			</tr>
 			<?php endfor;?>
 		</table>

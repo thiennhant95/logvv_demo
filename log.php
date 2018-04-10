@@ -32,6 +32,8 @@ $browser = $browser->getBrowser();
 
 $host_addr = $_SERVER["HTTP_HOST"];
 //$_GET["referrer"]="https://coccoc.com/search#query=viet+vang";
+//$_GET["referrer"]="https://vn.search.yahoo.com/search?p=muinetrips.com&fr=yfp-t&fp=1&toggle=1&cop=mss&ei=UTF-8";
+
 //$host_addr = "all-internet.jp";
 
 $ref_info	= parse_url($_GET["referrer"]);

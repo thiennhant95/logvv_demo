@@ -521,7 +521,6 @@ http://www.tooplate.com/view/2095-level
                 // Update the current year in copyright
                 $('.tm-current-year').text(new Date().getFullYear());
             });
-
         </script>
 
 </body>
