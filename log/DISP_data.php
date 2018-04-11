@@ -61,7 +61,7 @@ window.alert("")
 <?php endif; ?>
 </head>
 <center>
-<body onLoad="MM_preloadImages('images/menu_01_on.jpg','images/menu_02_on.jpg','images/menu_03_on.jpg','images/menu_04_on.jpg','images/menu_05_on.jpg','images/menu_on_01.jpg','images/menu_on_02.jpg','images/menu_on_03.jpg','images/menu_on_04.jpg','images/menu_on_05.jpg')">
+<body onLoad="MM_preloadImages('images/menu_01_on.jpg','images/menu_02_on.jpg','images/menu_03_on.jpg','images/menu_04_on.jpg','images/menu_05_on.jpg','images/menu_on_01.jpg','images/menu_on_02.jpg','images/menu_on_03.jpg','images/menu_on_04.jpg','images/menu_on_05.jpg','images/menu_on_ip.jpg')">
 <div class="topnav" id="myTopnav">
     <a href="" class="active">LOG ACCESS</a>
     <a href="../fmanager/">FILE MANAGE</a>
@@ -186,6 +186,16 @@ window.alert("")
 			</tr>
 			<input type="hidden" name="mode" value="os">
 			</form>
+            <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
+                <tr>
+                    <?php if($_POST["mode"]=="ip"):?>
+                        <td width="178" height="23"><img src="images/menu_on_ip.jpg" name="Image99" width="178" height="23" border="0" id="Image19"></td>
+                    <?php else:?>
+                        <td width="178" height="23"><input type="image" src="images/menu_off_ip.jpg" name="Image99" width="178" height="23" border="0" id="Image99" onMouseOver="MM_swapImage('Image19','','images/menu_on_ip.jpg',1)" onMouseOut="MM_swapImgRestore()"></td>
+                    <?php endif;?>
+                </tr>
+                <input type="hidden" name="mode" value="ip">
+            </form>
 			<form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
 			<tr>
 				<?php if($_POST["mode"]=="ref"):?>
@@ -196,6 +206,7 @@ window.alert("")
 			</tr>
 			<input type="hidden" name="mode" value="ref">
 			</form>
+
 			<form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
 			<tr>
 				<?php if($_POST["mode"]=="all"):?>

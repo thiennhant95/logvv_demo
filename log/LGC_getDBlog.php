@@ -770,6 +770,37 @@ function ref_access_u(){
     return $fetch_ref = $referen;
 }
 #-----------------------------------------------
+function ip_adrress(){
+
+    $referen_array= array();
+    $fetch=access();
+    foreach ($fetch as $key_fetch => $row_fetch) {
+        if ($row_fetch['REMOTE_ADDR'] != '') {
+            // Add to the current group count if it exists
+            if (isset($referen_array[$row_fetch['REMOTE_ADDR']])) {
+                $referen_array[$row_fetch['REMOTE_ADDR']]++;
+            } // or initialize to 1 if it doesn't exist
+            else $referen_array[$row_fetch['REMOTE_ADDR']] = 1;
+
+            // Or the ternary one-liner version
+            // instead of the preceding if/else block
+            $referen_array[$row_fetch['REMOTE_ADDR']] = isset($referen_array[$row_fetch['REMOTE_ADDR']]) ? $referen_array[$row_fetch['REMOTE_ADDR']]++ : 1;
+            arsort($referen_array);
+            array_slice($referen_array, 0, 3);
+            $referen= array();
+            $i=0;
+            foreach ($referen_array as $key_1 => $row)
+            {
+                $referen[$i]['REMOTE_ADDR']=$key_1;
+                $referen[$i]['CNT']=$row;
+                $i++;
+            }
+        }
+    }
+    return $fetch_ref = $referen;
+}
+print_r(ip_adrress());
+#-----------------------------------------------
 if(empty($term)){
     $dbh = new sqlite3Ope(SQLITE3_OPEN_READWRITE);
     $create=$dbh->sqlite3Ope(DB_FILEPATH,CREATE_SQL1);
