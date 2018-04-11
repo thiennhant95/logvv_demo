@@ -35,20 +35,20 @@ $total_sql = 'SELECT `ID` FROM `ACCESS_LOG`';
 
 $fetch = $dbh->fetch($total_sql);
 
-$total_uu_sql = $total_sql."WHERE (USER_FLG == '1')";
+$total_uu_sql = $total_sql."WHERE (UNIQUE_FLG == '1')";
 $fetch_uu = $dbh->fetch($total_uu_sql);
 
 $today_day_time = date('Ymd', mktime(0,0,0,date("n"),date("j"),date("Y")));
 
-$today_sql = "
-SELECT
-	ID
-FROM
- ACCESS_LOG
-WHERE
-	( strftime('%Y%m%d', INS_DATE) = '".$today_day_time."')
-";
-$TodayCnt = $dbh->fetch($today_sql);
+//$today_sql = "
+//SELECT
+//	ID
+//FROM
+// ACCESS_LOG
+//WHERE
+//	( strftime('%Y%m%d', INS_DATE) = '".$today_day_time."')
+//";
+//$TodayCnt = $dbh->fetch($today_sql);
 
 #---------------------------------------------------------------
 function access()
@@ -63,34 +63,51 @@ function access()
     return $fetch = $dbh->fetch($total_sql);
 }
 #--------------------------------------------------------------------
+function today(){
 
-function day_access(){
+    $referen_array= array();
+    $fetch=access();
+    $today_day_time = date('Y-m-d', mktime(0,0,0,date("n"),date("j"),date("Y")));
+    foreach ($fetch as $key_fetch => $row_fetch) {
+//        echo $row_fetch['INS_DATE'];
+//        echo "<pre>";
+//        echo $today_day_time;
+        if ($row_fetch['INS_DATE']==$today_day_time) {
 
-    $counts = array();
-    $access_query=access();
-    foreach ($access_query as $key=>$subarr) {
-        // Add to the current group count if it exists
-        if (isset($counts[$subarr['INS_DATE']])) {
-            $counts[$subarr['INS_DATE']]++;
-        }
-        // or initialize to 1 if it doesn't exist
-        else $counts[$subarr['INS_DATE']] = 1;
-
-        // instead of the preceding if/else block
-        $counts[$subarr['INS_DATE']] = isset($counts[$subarr['INS_DATE']]) ? $counts[$subarr['INS_DATE']]++ : 1;
-        $fetch_a = array();
-        $i=0;
-        foreach ($counts as $key_1 => $row)
-        {
-            $fetch_a[$i]['INS_DATE']=$key_1;
-            $fetch_a[$i]['CNT']=$row;
-            $fetch_a[$i]['D']= strftime('%d', strtotime($key_1));
-            $fetch_a[$i]['M']= strftime('%m', strtotime($key_1));
-            $fetch_a[$i]['Y']= strftime('%Y', strtotime($key_1));
-            $i++;
+            $referen_array[]['ID']=$row_fetch['ID'];
         }
     }
-    return $fetch_a;
+    return $referen_array;
+}
+$TodayCnt = today();
+#--------------------------------------------------------------------
+function day_access(){
+
+$counts = array();
+$access_query=access();
+foreach ($access_query as $key=>$subarr) {
+    // Add to the current group count if it exists
+    if (isset($counts[$subarr['INS_DATE']])) {
+        $counts[$subarr['INS_DATE']]++;
+    }
+    // or initialize to 1 if it doesn't exist
+    else $counts[$subarr['INS_DATE']] = 1;
+
+    // instead of the preceding if/else block
+    $counts[$subarr['INS_DATE']] = isset($counts[$subarr['INS_DATE']]) ? $counts[$subarr['INS_DATE']]++ : 1;
+    $fetch_a = array();
+    $i=0;
+    foreach ($counts as $key_1 => $row)
+    {
+        $fetch_a[$i]['INS_DATE']=$key_1;
+        $fetch_a[$i]['CNT']=$row;
+        $fetch_a[$i]['D']= strftime('%d', strtotime($key_1));
+        $fetch_a[$i]['M']= strftime('%m', strtotime($key_1));
+        $fetch_a[$i]['Y']= strftime('%Y', strtotime($key_1));
+        $i++;
+    }
+}
+return $fetch_a;
 }
 
 #-------------------------------------
@@ -762,7 +779,7 @@ if(empty($term)){
     $create=$dbh->sqlite3Ope($db_filepath,CREATE_SQL1);
 }
 
-if (!isset($_POST["mode"])) $_POST["mode"]='a';
+if (!isset($_POST["mode"])) $_POST["mode"]='day';
 switch ($_POST["mode"]):
 	case "day":
 			$fetch_day = day_access();
@@ -795,7 +812,7 @@ switch ($_POST["mode"]):
             $fetchENGINE_u = engine_access_u();
 		break;
 	case "query":
-			$fetchQuery = access_query();
+//			$fetchQuery = access_query();
 		break;
 	case "bro":
 			$fetch_bro = bro_access();
@@ -826,7 +843,7 @@ switch ($_POST["mode"]):
 			$fetchURL_u = page_u_access();
 			$fetchENGINE = engine_access();
             $fetchENGINE_u = engine_access_u();
-			$fetchQuery = access_query();
+//			$fetchQuery = access_query();
 			$fetch_bro = bro_access();
             $fetch_bro_u= bro_access_u();
 			$fetch_os = os_access();

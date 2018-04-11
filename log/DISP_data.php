@@ -62,7 +62,6 @@ window.alert("")
 </head>
 <center>
 <body onLoad="MM_preloadImages('images/menu_01_on.jpg','images/menu_02_on.jpg','images/menu_03_on.jpg','images/menu_04_on.jpg','images/menu_05_on.jpg','images/menu_on_01.jpg','images/menu_on_02.jpg','images/menu_on_03.jpg','images/menu_on_04.jpg','images/menu_on_05.jpg')">
-<body>
 <div class="topnav" id="myTopnav">
     <a href="" class="active">LOG ACCESS</a>
     <a href="../fmanager/">FILE MANAGE</a>
@@ -156,16 +155,16 @@ window.alert("")
 			</tr>
 			<input type="hidden" name="mode" value="engine">
 			</form>
-			<form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
-			<tr>
-				<?php if($_POST["mode"]=="query"):?>
-				<td width="178" height="23"><img src="images/menu_on_02.jpg" name="Image7" width="178" height="23" border="0" id="Image7"></td>
-				<?php else:?>
-				<td width="178" height="23"><input type="image" src="images/menu_off_02.jpg" name="Image7" width="178" height="23" border="0" id="Image7" onMouseOver="MM_swapImage('Image7','','images/menu_on_02.jpg',1)" onMouseOut="MM_swapImgRestore()"></td>
-				<?php endif;?>
-			</tr>
-			<input type="hidden" name="mode" value="query">
-			</form>
+<!--			<form method="post" action="--><?php //echo $_SERVER["PHP_SELF"];?><!--">-->
+<!--			<tr>-->
+<!--				--><?php //if($_POST["mode"]=="query"):?>
+<!--				<td width="178" height="23"><img src="images/menu_on_02.jpg" name="Image7" width="178" height="23" border="0" id="Image7"></td>-->
+<!--				--><?php //else:?>
+<!--				<td width="178" height="23"><input type="image" src="images/menu_off_02.jpg" name="Image7" width="178" height="23" border="0" id="Image7" onMouseOver="MM_swapImage('Image7','','images/menu_on_02.jpg',1)" onMouseOut="MM_swapImgRestore()"></td>-->
+<!--				--><?php //endif;?>
+<!--			</tr>-->
+<!--			<input type="hidden" name="mode" value="query">-->
+<!--			</form>-->
             <?php } ?>
 			<form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
 			<tr>
@@ -208,13 +207,36 @@ window.alert("")
 			<input type="hidden" name="mode" value="all">
 			</form>
 			<tr>
-				<td width="178" height="28"><img src="images/m_access.gif" width="178" height="28"></td>
-			</tr>
-			<tr>
 
 		  <td height="30" align="center" background="images/m_d_access_back.gif">
-			SỐ LƯỢT XEM TRANG: <b><font color="#003399" size="3"><?php echo count($fetch);?></font></b><br>
-			SỐ LƯỢT TRUY CẬP : <b><font color="#003399" size="3"><?php echo count($fetch_uu)?></font></b>
+              <?php
+              $date=date('Y_m', strtotime('-6 month', strtotime(date('Y-m'))));
+              ?>
+              <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
+                  <img src="images/m_access1.jpg" width="178" height="28"> <br>
+                  (6 tháng gần nhất)<br>
+                  <select name="term" id="term">
+                      <?php
+                      $dir = opendir(ACCESS_PATH);
+                      while($strfile[] = readdir($dir));
+                      rsort($strfile);
+                      reset($strfile);
+                      closedir($dir);
+                      foreach($strfile as $v){
+                          if(strstr($v,"access_log_db")){
+                              $db_fname = explode("_",$v);
+                              $filedate = $db_fname[0]."_".$db_fname[1];
+                              if ($filedate >= $date) {
+                                  echo "<option value=\"" . $filedate . "\">" . $db_fname[0] . '_' . $db_fname[1] . "</option>\n";
+                              }
+                          }
+                      }
+                      ?>
+                  </select>&nbsp;&nbsp;&nbsp;<input type="submit" name="reg" value="XEM">
+                  <br><br>
+              </form>
+              &nbsp;&nbsp;&nbsp;&nbsp;SỐ LƯỢT XEM TRANG: <b><font color="#003399" size="3"><?php echo count($fetch);?></font></b><br>
+              &nbsp;&nbsp;SỐ LƯỢT TRUY CẬP : <b><font color="#003399" size="3"><?php echo count($fetch_uu)?></font></b>
 			</td>
 			</tr>
 			<tr>
@@ -229,12 +251,10 @@ window.alert("")
             <?php
             $date=date('Y_m', strtotime('-6 month', strtotime(date('Y-m'))));
             ?>
-			<form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
+			<form>
 			<tr>
 				<td width="178" height="158" background="images/menu_under_01.gif" align="right" valign="top" style="padding-right:5px;">
-                    ■ DỮ LIỆU TRUY CẬP <br>
-                    (Trong 6 tháng gần nhất)<br>
-				<select name="term" id="term">
+				<select style="display: none">
             <?php
             $dir = opendir(ACCESS_PATH);
             while($strfile[] = readdir($dir));
@@ -253,7 +273,6 @@ window.alert("")
             ?>
 				</select>
 				<br><br>
-				<input type="submit" name="reg" value="XEM">
 				</td>
 			</tr>
 			</form>
@@ -311,7 +330,7 @@ window.alert("")
                 <tr bgcolor="white">
                     <td align="left" colspan="4"><b style=" text-align:center;color:#0B0D60;font-size: 15px;font-family: Avenir, Helvetica, sans-serif">1000 LƯỢT TRUY CẬP MỚI NHẤT TRONG NGÀY <?php echo date('d-m') ?></b></td>
                 </tr>
-                    <th bgcolor="white">REMOTE ADDR</th>
+                    <th bgcolor="white">IP ADDRESS</th>
                     <th bgcolor="white">COUNTRY/ CITY</th>
                     <th bgcolor="white">PAGE URL</th>
                     <th bgcolor="white">TIME</th>
@@ -320,7 +339,7 @@ window.alert("")
                     if ($row_day['INS_DATE']==date('Y-m-d')) {
                         ?>
                         <tr bgcolor="white" style="height: 35px">
-                            <td><?php echo $row_day['REMOTE_ADDR']  ?></td>
+                            <td><a href="https://whatismyipaddress.com/ip/<?php echo $row_day['REMOTE_ADDR']?>"><?php echo $row_day['REMOTE_ADDR']  ?></a></td>
                             <td><?php echo $row_day['COUNTRY'].' / '. $row_day['CITY']?></td>
                             <td><a href="<?php echo $row_day['PAGE_URL'] ?>"><?php echo $row_day['PAGE_URL'] ?></a></td>
                             <td><?php echo $row_day['TIME'].'  ' ?></td>
@@ -372,7 +391,7 @@ window.alert("")
             ?>
                 <table width="553" cellpadding="0" cellspacing="1" border="0" bgcolor="#000000">
                     <thead style="color: white">
-                    <th>REMOTE ADDR</th>
+                    <th>IP ADDRESS</th>
                     <th>COUNTRY/ CITY</th>
                     <th>PAGE URL</th>
                     <th>TIME - DAY</th>
@@ -381,7 +400,7 @@ window.alert("")
                 foreach ($Mon_top as $row) {
                 ?>
                 <tr bgcolor="#FFFFFF" style="height: 30px">
-                    <td><?php echo $row['REMOTE_ADDR']  ?></td>
+                    <td><a href="https://whatismyipaddress.com/ip/<?php echo $row['REMOTE_ADDR']?>"><?php echo $row['REMOTE_ADDR']  ?></a></td>
                     <td><?php echo $row['COUNTRY'].' / '.$row['CITY']  ?></td>
                     <td><a href="<?php echo $row['PAGE_URL'] ?>" target="_blank"><?php echo $row['PAGE_URL'] ?></a></td>
                     <td><?php echo $row['TIME'].'  '.date("d-m-Y", strtotime($row['INS_DATE'])); ?></td>
@@ -722,6 +741,16 @@ window.alert("")
 		</table>
 		<?php endif;?>
 
+            <?php
+            if(!empty($fetch_os_u)):
+                $sum_os_u=0;
+                for ($i=0;$i<=count($fetch_os_u);$i++)
+                {
+                    if (isset($fetch_os_u[$i]['CNT']))
+                        $sum_os_u += $fetch_os_u[$i]['CNT'];
+                }
+            endif;
+            ?>
 		<?php if(!empty($fetch_os)):?>
 		<?php $fetch_max = $fetch_os[0]['CNT'];?>
 		<br>
@@ -752,7 +781,7 @@ window.alert("")
                         $width = @round($fetch_os_u[$i]['CNT']/$fetch_max * 100);
                         ?>
                         <img src="images/bar_uu.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
-                        <?php echo round($fetch_os_u[$i]['CNT']/count($fetch) * 100);?>%<?php echo "(".$fetch_os_u[$i]['CNT']." Lượt)";?>
+                        <?php echo round($fetch_os_u[$i]['CNT']/$sum_os_u * 100);?>%<?php echo "(".$fetch_os_u[$i]['CNT']." Lượt)";?>
                     <?php
                     }
                     ?>

@@ -613,11 +613,11 @@ $fetch_ref = $referen;
                                         <?php echo ($i + 1);?>：<?php echo $fetchENGINE[$i]['ENGINE'];?>（<?php echo $fetchENGINE[$i]['CNT'];?> Lượt）<br>
                                     <?php endfor;?>
                                     <br>
-                                    <span class="style2"><strong>TOP 10 TỪ KHÓA</strong></span><br><br>
-                                    <?php for($i=0;$i<count($fetchQuery);$i++):?>
-                                        <?php echo ($i + 1);?>：<?php echo $fetchQuery[$i]['QUERY_STRING'];?>（<?php echo $fetchQuery[$i]['CNT'];?> Lượt）<br>
-                                    <?php endfor;?>
-                                    <br>
+<!--                                    <span class="style2"><strong>TOP 10 TỪ KHÓA</strong></span><br><br>-->
+<!--                                    --><?php //for($i=0;$i<count($fetchQuery);$i++):?>
+<!--                                        --><?php //echo ($i + 1);?><!--：--><?php //echo $fetchQuery[$i]['QUERY_STRING'];?><!--（--><?php //echo $fetchQuery[$i]['CNT'];?><!-- Lượt）<br>-->
+<!--                                    --><?php //endfor;?>
+<!--                                    <br>-->
                                     <span class="style2"><strong>TOP 3 TRÌNH DUYỆT</strong></span><br><br>
                                     <?php for($i=0;$i<count($fetch_bro);$i++):?>
                                         <?php echo ($i + 1);?>：<?php echo $fetch_bro[$i]['BROWSER'];?>（<?php echo $fetch_bro[$i]['CNT'];?> Lượt）<br>
@@ -655,6 +655,8 @@ $fetch_ref = $referen;
                     </td>
                 </tr>
             </table>
+            <br>
+            <br>
             <br>
             LIÊN HỆ&nbsp;&nbsp;           CÔNG TY PHẦN MỀM VIỆT VANG<br>
             SỐ 7 Trần Xuân Hòa, Quận 5, TP.HCM<br>
