@@ -1,9 +1,10 @@
 <?php
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-//if( !$_SERVER['PHP_AUTH_USER'] || !$_SERVER['PHP_AUTH_PW'] ){
-//	header("HTTP/1.0 404 Not Found"); exit();
-//}
+if (!isset($_SESSION['account']))
+{
+    header('Location:../login/');
+}
 #-------------------------------------------------------------
 #-------------------------------------------------------------
 ?>
@@ -65,6 +66,7 @@ window.alert("")
 <div class="topnav" id="myTopnav">
     <a href="" class="active">LOG ACCESS</a>
     <a href="../fmanager/">FILE MANAGE</a>
+    <a style="float: right" href="../login/logout.php">LogOut</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
@@ -246,8 +248,8 @@ window.alert("")
                   </select>&nbsp;&nbsp;&nbsp;<input type="submit" name="reg" value="XEM">
                   <br><br>
               </form>
-              &nbsp;&nbsp;&nbsp;&nbsp;SỐ LƯỢT XEM TRANG: <b><font color="#003399" size="3"><?php echo count($fetch);?></font></b><br>
-              &nbsp;&nbsp;SỐ LƯỢT TRUY CẬP : <b><font color="#003399" size="3"><?php echo count($fetch_uu)?></font></b>
+              &nbsp;&nbsp;&nbsp;&nbsp; PAGEVIEWS: <b><font color="#003399" size="3"><?php echo count($fetch);?></font></b><br>
+              &nbsp;&nbsp;UNIQUE VISITORS : <b><font color="#003399" size="3"><?php echo count($fetch_uu)?></font></b>
 			</td>
 			</tr>
 			<tr>
@@ -256,7 +258,7 @@ window.alert("")
 			<tr>
 
 		  <td height="30" align="center" background="images/m_d_access_back.gif">
-			<b><font color="#003399" size="2">Lượt Xem Trang: <?php echo count($TodayCnt);?></font></b>&nbsp;&nbsp;
+			<b><font color="#003399" size="2"> PAGEVIEWS: <?php echo count($TodayCnt);?></font></b>&nbsp;&nbsp;
 			</td>
 			</tr>
             <?php
@@ -297,7 +299,7 @@ window.alert("")
 		<br>
 		<table width="250" cellpadding="0" cellspacing="1" border="0" bgcolor="#000000">
 			<tr bgcolor="#FFFFFF">
-				<td align="left" style="padding:5px;"><img src="images/bar.gif" width="50" height="10" align="absmiddle"> SỐ LƯỢT XEM TRANG<br><img src="images/bar_uu.gif" width="50" height="10" align="absmiddle"> SỐ LƯỢT TRUY CẬP</td>
+				<td align="left" style="padding:5px;"><img src="images/bar.gif" width="50" height="10" align="absmiddle">  PAGEVIEWS<br><img src="images/bar_uu.gif" width="50" height="10" align="absmiddle"> UNIQUE VISITORS</td>
 			</tr>
 		</table>
 		<?php if(!empty($fetch_day)):?>
@@ -325,9 +327,9 @@ window.alert("")
 					$width = @round($fetch_day[$i]['CNT']/$fetch_max * 100);
 					$width_uu = @round($fetch_day_uu[$i]['CNT']/$fetch_max * 100);?>
 	  <img src="images/bar.gif" width="<?php echo $width*3;?>" height="10" align="left">&nbsp;
-	  <?php echo "(".$fetch_day[$i]['CNT']." Lượt)";?><br>
+	  <?php echo "(".$fetch_day[$i]['CNT']." times)";?><br>
 	  <img src="images/bar_uu.gif" width="<?php echo $width_uu*3;?>" height="10" align="absmiddle">&nbsp;
-	  <?php echo "(".$fetch_day_uu[$i]['CNT']." Lượt)";?><br>
+	  <?php echo "(".$fetch_day_uu[$i]['CNT']." times)";?><br>
 	   </td>
 			</tr>
 			<?php endfor;?>
@@ -339,7 +341,7 @@ window.alert("")
             <br>
             <table width="553" cellpadding="0" cellspacing="1" border="0" bgcolor="#000000">
                 <tr bgcolor="white">
-                    <td align="left" colspan="4"><b style=" text-align:center;color:#0B0D60;font-size: 15px;font-family: Avenir, Helvetica, sans-serif">1000 LƯỢT TRUY CẬP MỚI NHẤT TRONG NGÀY <?php echo date('d-m') ?></b></td>
+                    <td align="left" colspan="4"><b style=" text-align:center;color:#0B0D60;font-size: 15px;font-family: Avenir, Helvetica, sans-serif">1000 PAGEVIEWS ON <?php echo date('d-m') ?></b></td>
                 </tr>
                     <th bgcolor="white">IP ADDRESS</th>
                     <th bgcolor="white">COUNTRY/ CITY</th>
@@ -386,9 +388,9 @@ window.alert("")
 				if($width > 0):
 				?>
 				<img src="images/bar.gif" width="<?php echo $width*3;?>" height="10" align="left">&nbsp;
-				<?php echo ($MonCnt[$mon])?"(".$MonCnt[$mon]['CNT']." Lượt)":"";?><br>
+				<?php echo ($MonCnt[$mon])?"(".$MonCnt[$mon]['CNT']." times)":"";?><br>
 				<img src="images/bar_uu.gif" width="<?php echo $width_uu*3;?>" height="10" align="absmiddle">&nbsp;
-				<?php echo ($MonCnt_uu[$mon])?"(".$MonCnt_uu[$mon]['CNT']." Lượt)":"";?>
+				<?php echo ($MonCnt_uu[$mon])?"(".$MonCnt_uu[$mon]['CNT']." times)":"";?>
 				<?php endif;?>
 				</td>
 			</tr>
@@ -455,14 +457,14 @@ window.alert("")
 				?>
 				<img src="images/bar.gif" width="<?php echo $width*3;?>" height="10" align="left">&nbsp;
 				<?php endif; ?>
-				<?php if (isset($fetch_time[$i]['CNT'])) echo ($fetch_time[$i]['CNT'])? "(".$fetch_time[$i]['CNT']." Lượt)":"";?><br>
+				<?php if (isset($fetch_time[$i]['CNT'])) echo ($fetch_time[$i]['CNT'])? "(".$fetch_time[$i]['CNT']." times)":"";?><br>
 				<?php
 				$width_uu = @round($fetch_time_uu[$i]['CNT']/$fetch_max * 100 );
 				if($width_uu > 0):
 				?>
 				<img src="images/bar_uu.gif" width="<?php echo $width_uu*3;?>" height="10" align="absmiddle">&nbsp;
 				<?php endif;?>
-				<?php if (isset($fetch_time_uu[$i]['CNT']))  echo ($fetch_time_uu[$i]['CNT'])?"(".$fetch_time_uu[$i]['CNT']." Lượt)":"";?><br>
+				<?php if (isset($fetch_time_uu[$i]['CNT']))  echo ($fetch_time_uu[$i]['CNT'])?"(".$fetch_time_uu[$i]['CNT']." times)":"";?><br>
 				</td>
 			</tr>
 			<?php
@@ -524,14 +526,14 @@ window.alert("")
 				<!--<img src="images/bar_u.gif" width="<?php echo $width_u*3;?>" height="10" align="left">-->
 				<img src="images/bar.gif" width="<?php echo $width*3;?>" height="10" align="left">&nbsp;
 				<?php endif;?>
-				<?php if (isset($fetch_dayofweek[$i]['CNT'])) echo ($fetch_dayofweek[$i]['CNT'])?"(".$fetch_dayofweek[$i]['CNT']." Lượt)":"";?><br>
+				<?php if (isset($fetch_dayofweek[$i]['CNT'])) echo ($fetch_dayofweek[$i]['CNT'])?"(".$fetch_dayofweek[$i]['CNT']." times)":"";?><br>
 				<?php
 				$width_uu = @round($fetch_dayofweek_uu[$i]['CNT']/$fetch_max * 100 );
 				if($width_uu > 0):
 				?>
 				<img src="images/bar_uu.gif" width="<?php echo $width_uu*3;?>" height="10" align="absmiddle">
 				<?php endif;?>
-				<?php if (isset($fetch_dayofweek_uu[$i]['CNT'])) echo ($fetch_dayofweek_uu[$i])?"(".$fetch_dayofweek_uu[$i]['CNT']." Lượt)":"";?><br>
+				<?php if (isset($fetch_dayofweek_uu[$i]['CNT'])) echo ($fetch_dayofweek_uu[$i])?"(".$fetch_dayofweek_uu[$i]['CNT']." times)":"";?><br>
 				</td>
 			</tr>
 			<?php
@@ -585,7 +587,7 @@ window.alert("")
 				?>
 				<img src="images/bar.gif" width="<?php echo $width*3;?>" height="10" align="left">&nbsp;
 				<?php echo round($fetchURL[$i]['CNT']/$fetch_sum * 100);?>%
-				<?php echo "(".$fetchURL[$i]['CNT']." Lượt)";?>
+				<?php echo "(".$fetchURL[$i]['CNT']." times)";?>
                     <?php
                     if (isset($fetchURL_u[$i])):
                     ?>
@@ -595,7 +597,7 @@ window.alert("")
                     ?>
                     <img src="images/bar_uu.gif" width="<?php echo $width*3;?>" height="10" align="left">&nbsp;
                     <?php echo round($fetchURL_u[$i]['CNT']/$fetch_sum_u * 100);?>%
-                    <?php echo "(".$fetchURL_u[$i]['CNT']." Lượt)";?>
+                    <?php echo "(".$fetchURL_u[$i]['CNT']." times)";?>
                     <?php
                     endif;
                     ?>
@@ -643,13 +645,13 @@ window.alert("")
 					$width = @round($fetchENGINE[$i]['CNT']/$fetch_max * 100);
 				?>
 				<img src="images/bar.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
-				<?php echo round($fetchENGINE[$i]['CNT']/$fetch_sum * 100);?>%<?php echo "(".$fetchENGINE[$i]['CNT']." Lượt)";?>
+				<?php echo round($fetchENGINE[$i]['CNT']/$fetch_sum * 100);?>%<?php echo "(".$fetchENGINE[$i]['CNT']." times)";?>
                  <br>
                     <?php
                     $width = @round($fetchENGINE_u[$i]['CNT']/$fetch_max * 100);
                     ?>
                     <img src="images/bar_uu.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
-                    <?php echo round($fetchENGINE_u[$i]['CNT']/$fetch_sum_u * 100);?>%<?php echo "(".$fetchENGINE_u[$i]['CNT']." Lượt)";?>
+                    <?php echo round($fetchENGINE_u[$i]['CNT']/$fetch_sum_u * 100);?>%<?php echo "(".$fetchENGINE_u[$i]['CNT']." times)";?>
                     <br><br>
                 </td>
 			</tr>
@@ -694,7 +696,7 @@ window.alert("")
 					$width = @round($fetchQuery[$i]['CNT']/$fetch_max * 100);
 				?>
 				<img src="images/bar.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
-				<?php echo round($fetchQuery[$i]['CNT']/$fetch_sum * 100);?>%<?php echo "(".$fetchQuery[$i]['CNT']." Lượt)";?>
+				<?php echo round($fetchQuery[$i]['CNT']/$fetch_sum * 100);?>%<?php echo "(".$fetchQuery[$i]['CNT']." times)";?>
 				</td>
 			</tr>
 			<?php endfor;?>
@@ -734,14 +736,14 @@ window.alert("")
 					$width = @round($fetch_bro[$i]['CNT']/$fetch_max * 100);
 				?>
 				<img src="images/bar.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
-				<?php echo round($fetch_bro[$i]['CNT']/count($fetch) * 100);?>%<?php echo "(".$fetch_bro[$i]['CNT']." Lượt)";?>
+				<?php echo round($fetch_bro[$i]['CNT']/count($fetch) * 100);?>%<?php echo "(".$fetch_bro[$i]['CNT']." times)";?>
                     <br/>
                     <?php
                     if (isset($fetch_bro_u[$i])):
                     $width = @round($fetch_bro_u[$i]['CNT']/$fetch_max * 100);
                     ?>
                     <img src="images/bar_uu.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
-                    <?php echo round($fetch_bro_u[$i]['CNT']/$sum_bro_u * 100);?>%<?php echo "(".$fetch_bro_u[$i]['CNT']." Lượt)";?>
+                    <?php echo round($fetch_bro_u[$i]['CNT']/$sum_bro_u * 100);?>%<?php echo "(".$fetch_bro_u[$i]['CNT']." times)";?>
                     <?php
                     endif;
                     ?>
@@ -782,7 +784,7 @@ window.alert("")
 					$width = @round($fetch_os[$i]['CNT']/$fetch_max * 100);
 				?>
 				<img src="images/bar.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
-				<?php echo round($fetch_os[$i]['CNT']/count($fetch) * 100);?>%<?php echo "(".$fetch_os[$i]['CNT']." Lượt)";?>
+				<?php echo round($fetch_os[$i]['CNT']/count($fetch) * 100);?>%<?php echo "(".$fetch_os[$i]['CNT']." times)";?>
                     <?php
                     if (isset($fetch_os_u[$i]))
                     {
@@ -792,7 +794,7 @@ window.alert("")
                         $width = @round($fetch_os_u[$i]['CNT']/$fetch_max * 100);
                         ?>
                         <img src="images/bar_uu.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
-                        <?php echo round($fetch_os_u[$i]['CNT']/$sum_os_u * 100);?>%<?php echo "(".$fetch_os_u[$i]['CNT']." Lượt)";?>
+                        <?php echo round($fetch_os_u[$i]['CNT']/$sum_os_u * 100);?>%<?php echo "(".$fetch_os_u[$i]['CNT']." times)";?>
                     <?php
                     }
                     ?>
@@ -802,6 +804,30 @@ window.alert("")
 			<?php endfor;?>
 		</table>
 		<?php endif;?>
+            <?php if(!empty($ip_adress)):?>
+                <br>
+                <table width="553" cellpadding="0" cellspacing="1" border="0" bgcolor="#000000">
+                    <br>
+                    <thead style="color: white">
+                    <th>IP ADDRESS</th>
+                    <th>COUNTRY/ CITY</th>
+                    <th>VIEW</th>
+                    <th>LAST SEEN</th>
+                    </thead>
+                    <?php
+                    foreach ($ip_adress as $row) {
+                    ?>
+                    <tr bgcolor="#FFFFFF" style="height: 30px">
+                        <td><a href="https://whatismyipaddress.com/ip/<?php echo $row['REMOTE_ADDR']?>"><?php echo $row['REMOTE_ADDR']  ?></a></td>
+                        <td><?php echo $row['COUNTRY_CITY'] ?></td>
+                        <td style="color: #d53239;font-weight: bold"><?php echo $row['CNT'] ?></td>
+                        <td><?php echo $row['LAST']; ?></td>
+                        <?php
+                        }
+                        ?>
+                    </tr>
+                </table>
+            <?php endif;?>
 		<?php if(!empty($fetch_ref)):?>
 		<?php
 			$fetch_max = $fetch_ref[0]['CNT'];
@@ -833,14 +859,14 @@ window.alert("")
 					$width = @round($fetch_ref[$i]['CNT']/$fetch_max * 100);
 				?>
 				<img src="images/bar.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
-				<?php echo round($fetch_ref[$i]['CNT']/$fetch_sum * 100);?>%<?php echo "(".$fetch_ref[$i]['CNT']." Lượt)";?>
+				<?php echo round($fetch_ref[$i]['CNT']/$fetch_sum * 100);?>%<?php echo "(".$fetch_ref[$i]['CNT']." times)";?>
                     <br>
                     <?php
                     if (isset($fetch_ref_u[$i])):
                     $width = @round($fetch_ref_u[$i]['CNT']/$fetch_max * 100);
                     ?>
                     <img src="images/bar_uu.gif" width="<?php echo $width*3;?>" height="10" align="absmiddle">&nbsp;
-                    <?php echo round($fetch_ref_u[$i]['CNT']/$fetch_sum_u * 100);?>%<?php echo "(".$fetch_ref_u[$i]['CNT']." Lượt)";?>
+                    <?php echo round($fetch_ref_u[$i]['CNT']/$fetch_sum_u * 100);?>%<?php echo "(".$fetch_ref_u[$i]['CNT']." times)";?>
                     <?php
                     endif;
                     ?>

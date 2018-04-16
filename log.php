@@ -44,6 +44,10 @@ if(!empty($_GET["referrer"])){
     $str = strstr($ref_url , $host_addr);
 
     if($str)$ref_url = "";
+    if ($ref_url=='m.facebook.com/')
+    {
+        $ref_url='m.facebook.com';
+    }
 }
 
 #----------------------------------------------------------------------------------------------------------------------

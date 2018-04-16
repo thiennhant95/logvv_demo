@@ -797,9 +797,21 @@ function ip_adrress(){
             }
         }
     }
-    return $fetch_ref = $referen;
+//    return $fetch_ref = $referen;
+    $i=0;
+    foreach ($referen as $row_referen)
+    {
+        foreach ($fetch as $key_fetch => $row_fetch)
+        {
+            if ($row_fetch['REMOTE_ADDR']==$row_referen['REMOTE_ADDR']) {
+                $referen[$i]['COUNTRY_CITY'] = $row_fetch['COUNTRY'] . ' / ' . $row_fetch['CITY'];
+                $referen[$i]['LAST'] = $row_fetch['TIME'].' '.date('d-m-Y',strtotime($row_fetch['INS_DATE']));
+            }
+        }
+    }
+        return $fetch_ref = $referen;
 }
-print_r(ip_adrress());
+
 #-----------------------------------------------
 if(empty($term)){
     $dbh = new sqlite3Ope(SQLITE3_OPEN_READWRITE);
@@ -857,6 +869,9 @@ switch ($_POST["mode"]):
 			$fetch_ref = ref_access();
             $fetch_ref_u = ref_access_u();
 		break;
+    case "ip":
+        $ip_adress=ip_adrress();
+        break;
 	case "all":
 			$fetch_day = day_access();
 			//$fetch_day_u = day_u_access();

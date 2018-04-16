@@ -1,10 +1,18 @@
 <?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+else
+    {
+        session_destroy();
+        session_start();
+}
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-//if( !$_SERVER['PHP_AUTH_USER'] || !$_SERVER['PHP_AUTH_PW'] ){
-//	header("HTTP/1.0 404 Not Found"); exit();
-//}
-
+if (!isset($_SESSION['account']))
+{
+    header('Location:../login/');
+}
 require_once("../common/logconfig.php");
 require_once("util_lib.php");
 require_once("sqlite3Ope.php");
@@ -12,7 +20,6 @@ require_once("sqlite3Ope.php");
 
 #-------------------------------------------------------------------
 #------------------------------------------------------------------
-session_start();
 if (!isset($_SESSION['term']))
 {
     $_SESSION['term']=date('Y_m');

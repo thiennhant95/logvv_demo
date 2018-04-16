@@ -12,6 +12,7 @@ $db->httpHeadersPrint("UTF-8",true,false,true,true);
 <div class="topnav" id="myTopnav">
     <a href="../log/" class="active">LOG ACCESS</a>
     <a href="">FILE MANAGE</a>
+    <a style="float: right" href="../login/logout.php">LogOut</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
@@ -26,12 +27,12 @@ $db->httpHeadersPrint("UTF-8",true,false,true,true);
     }
 </script>
 <div class="header"></div>
-<p class="page_title"><b>Phân Tích Truy Cập - File Manager</b></p>
+<p class="page_title"><b>Access analytics - File Manager</b></p>
 <p class="explanation">
-    ▼<strong>XÓA</strong> Click vào nút xóa để xóa File.<br>
-    ▼<strong>Các tập tin xóa không thể khôi phục.</strong> Hãy cẩn thận khi xử lý.<br><br>
-    ▼<strong>Báo Cáo</strong> <br>
-    ▼ <strong>Export CSV </strong>Nên Export CSV trước khi Delete<br>
+    ▼<strong>DELETE</strong> Click to delete access database.<br>
+    ▼<strong>Once you deleted the data.</strong>  you will not be able to restore it. Please be careful!<br><br>
+    ▼<strong>View Report</strong> <br>
+    ▼ <strong>Export CSV </strong>Should do this before delete the data.<br>
 </p>
 <table width="600" border="1" cellpadding="2" cellspacing="0">
 	<tr class="tdcolored">

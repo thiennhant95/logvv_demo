@@ -1,12 +1,14 @@
 <?php
+session_start();
 require_once("../common/logconfig.php");
 require_once("util_lib.php");
 require_once("sqlite3Ope.php");
 
 #---------------------------------------------------------------
-//if( !$_SERVER['PHP_AUTH_USER'] || !$_SERVER['PHP_AUTH_PW'] ){
-//    header("HTTP/1.0 404 Not Found"); exit();
-//}
+if (!isset($_SESSION['account']))
+{
+    header('Location:../login/');
+}
 
 $db=new utilLib();
 extract($db->getRequestParams("post",array(8,7,1,4),true));
@@ -439,7 +441,7 @@ $fetch_ref = $referen;
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>BÁO CÁO PHÂN TÍCH TRUY CẬP</title>
+    <title>ACCESS LOG REPORT</title>
     <style type="text/css">
         <!--
         .style1 {font-size: 11px}
@@ -461,8 +463,8 @@ $fetch_ref = $referen;
 <center>
 <body>
 <div class="head_button">
-<a href="index.php"><input type="button" id="return" name="button" value="QUAY LẠI"></a>
-<input type="button" id="printPageButton" name="button" value="IN BÁO CÁO" onClick="window.print();">
+<a href="index.php"><input type="button" id="return" name="button" value="RETURN"></a>
+<input type="button" id="printPageButton" name="button" value="PRINT REPORT" onClick="window.print();">
 </div>
 <table class="paper_seo">
     <tr>
@@ -479,18 +481,18 @@ $fetch_ref = $referen;
                         <?php $db_fname = explode("_",$filename);?>
                         <table width="100%" class="titles" cellpadding="5">
                             <tr>
-                                <td class="titles">Báo cáo phân tích truy cập tháng &nbsp;<?php echo $db_fname[1];?>/<?php echo $db_fname[0];?></td>
+                                <td class="titles">Report of access logs of &nbsp;<?php echo $db_fname[1];?>/<?php echo $db_fname[0];?></td>
                             </tr>
                         </table>
                         <br>
                         <table width="100%" border="0">
                             <tr>
-                                <td align="left" valign="bottom" colspan="3"><span class="style2"><strong>SỐ LẦN XEM TRANG：</strong><?php echo count($fetch);?><br><!--<strong>ユニークPV：</strong><?php //echo count($fetch_u);?><br>--><strong>SỐ LẦN TRUY CẬP:</strong><?php echo count($fetch_uu);?></span></td>
+                                <td align="left" valign="bottom" colspan="3"><span class="style2"><strong>PAGEVIEWS：</strong><?php echo count($fetch);?><br><!--<strong>ユニークPV：</strong><?php //echo count($fetch_u);?><br>--><strong>SỐ LẦN TRUY CẬP:</strong><?php echo count($fetch_uu);?></span></td>
                                 <!--<td>&nbsp;</td>-->
                             </tr>
                             <tr style="margin-top:10px;">
 
-                                <td width="33%" valign="top"><span class="style2"><strong>TRUY CẬP THEO NGÀY：</strong></span>
+                                <td width="33%" valign="top"><span class="style2"><strong>UNIQUE VISITORS：</strong></span>
                                     <?php
                                     $fetch_max = 0;
                                     for($i=0;$i<count($fetch_day);$i++){
@@ -518,7 +520,7 @@ $fetch_ref = $referen;
                                         <?php endfor; ?>
                                     </table>
                                 </td>
-                                <td width="33%" valign="top"><span class="style2"><strong>TRUY CẬP THEO GIỜ：</strong></span>
+                                <td width="33%" valign="top"><span class="style2"><strong>BY HOURS：</strong></span>
                                 <?php
                                     $fetch_max = 0;
                                     for($i=0;$i<23;$i++){
@@ -552,7 +554,7 @@ $fetch_ref = $referen;
                                     </table>
                                 </td>
 
-                                <td rowspan="2" width="33%" valign="top"><span class="style2"><strong>TRUY CẬP THEO TUẦN：</strong></span>
+                                <td rowspan="2" width="33%" valign="top"><span class="style2"><strong>BY WEEKDAY：</strong></span>
                                     <?php
                                     $fetch_max = 0;
                                     for($i=0;$i<=6;$i++) {
@@ -608,7 +610,7 @@ $fetch_ref = $referen;
                                         <?php endfor; ?>
                                     </table>
                                     <br>
-                                    <span class="style2"><strong>TOP 5 CÔNG CỤ TÌM KIẾM</strong></span><br><br>
+                                    <span class="style2"><strong>TOP 5 SEARCHING ENGINE</strong></span><br><br>
                                     <?php for($i=0;$i<count($fetchENGINE);$i++):?>
                                         <?php echo ($i + 1);?>：<?php echo $fetchENGINE[$i]['ENGINE'];?>（<?php echo $fetchENGINE[$i]['CNT'];?> Lượt）<br>
                                     <?php endfor;?>
@@ -618,12 +620,12 @@ $fetch_ref = $referen;
 <!--                                        --><?php //echo ($i + 1);?><!--：--><?php //echo $fetchQuery[$i]['QUERY_STRING'];?><!--（--><?php //echo $fetchQuery[$i]['CNT'];?><!-- Lượt）<br>-->
 <!--                                    --><?php //endfor;?>
 <!--                                    <br>-->
-                                    <span class="style2"><strong>TOP 3 TRÌNH DUYỆT</strong></span><br><br>
+                                    <span class="style2"><strong>TOP 3 BROWSERS</strong></span><br><br>
                                     <?php for($i=0;$i<count($fetch_bro);$i++):?>
                                         <?php echo ($i + 1);?>：<?php echo $fetch_bro[$i]['BROWSER'];?>（<?php echo $fetch_bro[$i]['CNT'];?> Lượt）<br>
                                     <?php endfor;?>
                                     <br>
-                                    <span class="style2"><strong>TOP 3 HỆ ĐIỀU HÀNH</strong></span><br><br>
+                                    <span class="style2"><strong>TOP 3 OPERATING SYSTEM</strong></span><br><br>
                                     <?php for($i=0;$i<count($fetch_os);$i++):?>
                                         <?php echo ($i + 1);?>：<?php echo $fetch_os[$i]['OS'];?>（<?php echo $fetch_os[$i]['CNT'];?> Lượt）<br>
                                     <?php endfor;?>
@@ -631,12 +633,12 @@ $fetch_ref = $referen;
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <span class="style2"><strong>TOP 3 TRANG TRUY CẬP NHIỀU NHẤT</strong></span><br><br>
+                                    <span class="style2"><strong>TOP 3 MOST VIEWED PAGES</strong></span><br><br>
                                     <?php for($i=0;$i<count($fetchURL_b);$i++):?>
                                         <?php echo ($i + 1);?>：<?php echo $fetchURL_b[$i]['PAGE_URL'];?>（<?php echo $fetchURL_b[$i]['CNT'];?> Lượt）<br>
                                     <?php endfor;?>
                                     <br>
-                                    <span class="style2"><strong>TOP 3 TRANG TRUY CẬP ÍT NHẤT</strong></span><br><br>
+                                    <span class="style2"><strong>3 LEAST VIEWED PAGES</strong></span><br><br>
                                     <?php for($i=0;$i<count($fetchURL_w);$i++):?>
                                         <?php echo ($i + 1);?>：<?php echo $fetchURL_w[$i]['PAGE_URL'];?>（<?php echo $fetchURL_w[$i]['CNT'];?> Lượt）<br>
                                     <?php endfor;?>
@@ -648,7 +650,7 @@ $fetch_ref = $referen;
                 </tr>
                 <tr>
                     <td>
-                        <span class="style2"><strong>TOP 3 WEB TÌM KIẾM:</strong></span><br><br>
+                        <span class="style2"><strong>TOP 3 REFERRERS:</strong></span><br><br>
                         <?php for($i=0;$i<count($fetch_ref);$i++):?>
                             <?php echo ($i + 1);?>：<?php echo $fetch_ref[$i]['REFERER'];?>（<?php echo $fetch_ref[$i]['CNT'];?> Lượt）<br>
                         <?php endfor;?>
@@ -658,8 +660,9 @@ $fetch_ref = $referen;
             <br>
             <br>
             <br>
-            LIÊN HỆ&nbsp;&nbsp;           CÔNG TY PHẦN MỀM VIỆT VANG<br>
-            SỐ 7 Trần Xuân Hòa, Quận 5, TP.HCM<br>
+            If you need any support, please contact
+      &nbsp;&nbsp;           <b>VIET VANG JSC</b><br>
+             7 Tran Xuân Haa, District 5, Ho Chi Minh City<br>
             Website: vietvang.net <br>
             TEL:+84(0)28 6265 1411　　EMAIL: info@vietvang.net
         </td>
